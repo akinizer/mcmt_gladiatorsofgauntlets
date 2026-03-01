@@ -1,0 +1,67 @@
+<tactics>
+  <action>
+    <name stringid="STR_ACTION_HAND">HandAttack</name>
+    <type>Attack</type>
+    <rate type="All">1.0</rate>
+    <attackaction>1</attackaction>
+    <handlogic>1</handlogic>
+    <forceareaattacktarget>1</forceareaattacktarget>
+    <anim>HandAttack</anim>
+    <onhiteffect type="Snare" duration="2" rate="0.85">
+    </onhiteffect>
+    <impacteffect>effects\impacts\hack</impacteffect>
+  </action>
+  <action>
+    <name stringid="STR_ACTION_GORE">Gore</name>
+    <type>Gore</type>
+    <rate type="HumanSoldier">1.0</rate>
+    <rate type="LogicalTypeMythUnitNotTitan">1.0</rate>
+    <rate type="LogicalTypeVillagerNotHero">1.0</rate>
+    <rate type="TradeUnit">1.0</rate>
+    <attackaction>1</attackaction>
+    <handlogic>1</handlogic>
+    <anim>Gore</anim>
+    <chargeaction>1</chargeaction>
+    <impacteffect>effects\impacts\hack</impacteffect>
+  </action>
+  <action>
+    <name>CharismaSpeed</name>
+    <type>AutoRangedModify</type>
+    <modifyabstracttype>Unit</modifyabstracttype>
+    <forbidabstracttype>MythUnit</forbidabstracttype>
+    <forbidabstracttype>Ship</forbidabstracttype>
+    <maxrange>10</maxrange>
+    <persistent>1</persistent>
+    <modifytype>Speed</modifytype>
+    <modifymultiplier>1.10</modifymultiplier>
+  </action>
+  <action>
+    <name>CharismaAttack</name>
+    <type>AutoRangedModify</type>
+    <modifyabstracttype>Unit</modifyabstracttype>
+    <forbidabstracttype>MythUnit</forbidabstracttype>
+    <forbidabstracttype>Ship</forbidabstracttype>
+    <maxrange>10</maxrange>
+    <persistent>1</persistent>
+    <modifytype>Damage</modifytype>
+    <modifymultiplier>1.10</modifymultiplier>
+  </action>
+  <action>
+    <name>AreaHeal</name>
+    <type>AutoRangedModify</type>
+    <modifyabstracttype>LogicalTypeHealed</modifyabstracttype>
+    <persistent>1</persistent>
+    <modifytype>HealRate</modifytype>
+    <modifyflyingunits>1</modifyflyingunits>
+    <includeally>1</includeally>
+    <modelattachment>greek\godpowers\restoration\healing_vfx.xml</modelattachment>
+    <modelattachmentbone>bonethatdoesntexist</modelattachmentbone>
+  </action>
+  <tactic>Default
+	<action priority="100">Gore</action>
+	<action priority="90">HandAttack</action>
+	<action>CharismaSpeed</action>
+	<action>CharismaAttack</action>
+	<action>AreaHeal</action>
+	<attacktype>LogicalTypeHandUnitsAttack</attacktype><autoattacktype>LogicalTypeHandUnitsAutoAttack</autoattacktype><attackresponsetype>LogicalTypeHandUnitsAttack</attackresponsetype></tactic>
+</tactics>
