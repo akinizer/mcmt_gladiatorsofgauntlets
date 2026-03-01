@@ -1670,259 +1670,301 @@
 		  <rate type="AbstractTemple">1.00000</rate>
 		</protoaction>
 	  </unit>
-	<!-- LOCKED GAUNTLET LEGENDS
+	  <unit name="GauntletLegendTheris" mergeMode="replace">
+		<displaynameid>STR_GAUNT_EFF_LEGEND_THERIS</displaynameid>
+		<rollovertextid>STR_UNIT_THERIS_LR</rollovertextid>
+		<shortrollovertextid>STR_UNIT_THERIS_SR</shortrollovertextid>
+		<icon>resources\spc\player_color\units\theris_icon.png</icon>
+		<minimapicon>ui\minimap\minimap_hero_spc</minimapicon>
+		<animfile>spc\units\theris\theris.xml</animfile>
+		<soundsetfile>egyptian\vo\sphinx\sphinx.xml</soundsetfile>
+		<obstructionradiusx>0.7400</obstructionradiusx>
+		<obstructionradiusz>0.7400</obstructionradiusz>
+		<impacttype>Unarm0oured</impacttype>
+		<unitaitype>HandCombative</unitaitype>
+		<autoattackrange>32.0000</autoattackrange>
+		<movementtype>air</movementtype>
+		<turnrate>18.0000</turnrate>
+		<initialhitpoints>5000.0000</initialhitpoints>
+		<maxhitpoints>5000.0000</maxhitpoints>
+		<unitregen>10.0000</unitregen>
+		<weightclass>7</weightclass>
+		<maxcontained>5.0000</maxcontained>
+		<populationcount>1</populationcount>
+		<maxvelocity>15.3000</maxvelocity>
+		<rechargetime>5.0000</rechargetime>
+		<los>50.0000</los>
+		<sharedselectionunittypes>
+		  <unittype>LogicalTypeSharedHeroSelection</unittype>
+		</sharedselectionunittypes>
+		<armor type="Hack" value="0.99"></armor>
+		<armor type="Pierce" value="0.99"></armor>
+		<armor type="Crush" value="0.99"></armor>
+		<unittype>LogicalTypeNeededForVictory</unittype>
+		<unittype>LogicalTypeHandUnitsAutoAttack</unittype>
+		<unittype>LogicalTypeLandMilitary</unittype>
+		<unittype>LogicalTypeValidSPCUnitsDeadCondition</unittype>
+		<unittype>LogicalTypeGarrisonInShips</unittype>
+		<unittype>LogicalTypeRangedUnitsAutoAttack</unittype>
+		<unittype>LogicalTypeVillagersAttack</unittype>
+		<unittype>LogicalTypeHandUnitsAttack</unittype>
+		<unittype>LogicalTypeRangedUnitsAttack</unittype>
+		<unittype>LogicalTypeMinimapFilterMilitary</unittype>
+		<unittype>MilitaryUnit</unittype>
+		<unittype>UnitClass</unittype>
+		<unittype>Unit</unittype>
+		<unittype>Hero</unittype>
+		<unittype>MajorHero</unittype>
+		<unittype>LegendHero</unittype>
+		<unittype>HeroShadowUpgraded</unittype>
+		<unittype>InfantryLineUpgraded</unittype>
+		<unittype>CavalryLineUpgraded</unittype>
+		<unittype>AbstractScout</unittype>
+		<unittype>AbstractSamurai</unittype>
+		
+		<unittype>LogicalTypeConvertsHerds</unittype>
+		<unittype>LogicalTypeEarthquakeAttack</unittype>
+		<unittype>LogicalTypeAffectedByRestoration</unittype>
+		<unittype>LogicalTypeValidMeteorTarget</unittype>
+		<unittype>LogicalTypeValidTornadoAttack</unittype>
+		<unittype>LogicalTypeHealed</unittype>
+		<unittype>LogicalTypeValidShockwaveTarget</unittype>
+		<unittype>CountsTowardMilitaryScore</unittype>		
+		<unittype>LogicalTypeFindMilitaryHero</unittype>
+		<unittype>LogicalTypeDivineImmunity</unittype>
+		<unittype>LogicalTypeHealableHero</unittype>
+		<flag>CollidesWithProjectiles</flag>
+		<flag>CorpseDecays</flag>
+		<flag>ShowGarrisonButton</flag>
+		<flag>DontRotateObstruction</flag>
+		<flag>ObscuredByUnits</flag>
+		<flag>NotDeleteable</flag>
+		<flag>KnockoutDeath</flag>
+		<flag>MilitaryCommands</flag>
+		<flag>CreateUnitGroupAutomatically</flag>
+		<flag>TieToWaterSurface</flag>
+		<command row="3" column="0">Stop</command>
+		<contain external="1">LogicalTypePickable</contain>
+		<tactics>handattack_jumpattack.tactics</tactics>
+		<protoaction>
+		  <name>HandAttack</name>
+		  <rof>0.600000</rof>
+		  <damage type="Hack">999.000000</damage>
+		  <damage type="Divine">999.000000</damage>
+		  <damagebonus type="MythUnit">3.000000</damagebonus>
+		  <damagearea>8.000000</damagearea>
+		  <damageflags>Nature|Enemy</damageflags>
+		  <impacteffect>effects\impacts\crush</impacteffect>
+		  <maxrange>1.50000</maxrange>
+		</protoaction>
+		<protoaction>
+		  <name>JumpAttack</name>
+		  <rof>1.000000</rof>
+		  <damage type="Divine">9999.000000</damage>
+		  <damagearea>28.000000</damagearea>
+		  <damageflags>Nature|Enemy</damageflags>
+		  <damagebonus type="AbstractTitan">3.000000</damagebonus>
+		  <minrange>10.000000</minrange>
+		  <maxrange>40.000000</maxrange>
+		  <rate type="Building">1.0</rate>
+		  <rate type="NavalUnit">1.0</rate>
+		  <impacteffect>effects\impacts\fireball</impacteffect>
+		</protoaction>
+		<protoaction>
+		  <name>Pickup</name>
+		  <type>Pickup</type>
+		  <maxrange>1</maxrange>
+		  <rate type="LogicalTypePickable">1.00000</rate>
+		</protoaction>
+		<protoaction>
+		  <name>DropOff</name>
+		  <type>DropOff</type>
+		  <maxrange>1</maxrange>
+		  <rate type="AbstractTemple">1.00000</rate>
+		</protoaction>
+	  </unit>
+	  
+	<!-- LOCKED GAUNTLET LEGENDS -->
 	
-	<unit name="Brunhild">
-    <displaynameid>STR_UNIT_BRUNHILD_NAME</displaynameid>
-    <rollovertextid>STR_UNIT_BRUNHILD_LR</rollovertextid>
-    <shortrollovertextid>STR_UNIT_BRUNHILD_SR</shortrollovertextid>
-    <icon>resources\spc\player_color\units\reginleif_icon.png</icon>
-    <minimapicon>ui\minimap\minimap_hero_spc</minimapicon>
-    <animfile>spc\units\reginleif\reginleif.xml</animfile>
-    <soundsetfile>spc\vo\reginleif\reginleif.xml</soundsetfile>
-    <obstructionradiusx>0.4900</obstructionradiusx>
-    <obstructionradiusz>0.4900</obstructionradiusz>
-    <impacttype>Armoured</impacttype>
-    <unitaitype>RangedCombative</unitaitype>
-    <autoattackrange>16.0000</autoattackrange>
-    <formationorder>5</formationorder>
-    <movementtype>land</movementtype>
-    <turnrate>18.0000</turnrate>
-    <initialhitpoints>400.0000</initialhitpoints>
-    <maxhitpoints>400.0000</maxhitpoints>
-    <unitregen>2.0000</unitregen>
-    <weightclass>6</weightclass>
-    <maxcontained>1.0000</maxcontained>
-    <populationcount>1</populationcount>
-    <maxvelocity>4.3000</maxvelocity>
-    <los>20.0000</los>
-    <sharedselectionunittypes>
-      <unittype>LogicalTypeSharedHeroSelection</unittype>
-    </sharedselectionunittypes>
-    <armor type="Hack" value="0.5500">
-    </armor>
-    <armor type="Pierce" value="0.6000">
-    </armor>
-    <armor type="Crush" value="0.9900">
-    </armor>
-    <unittype>LogicalTypeNeededForVictory</unittype>
-    <unittype>LogicalTypeHandUnitsAutoAttack</unittype>
-    <unittype>LogicalTypeLandMilitary</unittype>
-    <unittype>LogicalTypeValidSPCUnitsDeadCondition</unittype>
-    <unittype>LogicalTypeGarrisonInShips</unittype>
-    <unittype>LogicalTypeRangedUnitsAutoAttack</unittype>
-    <unittype>LogicalTypeVillagersAttack</unittype>
-    <unittype>LogicalTypeHandUnitsAttack</unittype>
-    <unittype>LogicalTypeRangedUnitsAttack</unittype>
-    <unittype>LogicalTypeMinimapFilterMilitary</unittype>
-    <unittype>LogicalTypeSharedHeroSelection</unittype>
-    <unittype>Ranged</unittype>
-    <unittype>UnitClass</unittype>
-    <unittype>MilitaryUnit</unittype>
-    <unittype>Unit</unittype>
-    <unittype>Hero</unittype>
-    <unittype>LogicalTypeDivineImmunity</unittype>
-    <unittype>LogicalTypeValidBoltTarget</unittype>
-    <unittype>LogicalTypeConvertsHerds</unittype>
-    <unittype>LogicalTypeEarthquakeAttack</unittype>
-    <unittype>LogicalTypeAffectedByRestoration</unittype>
-    <unittype>LogicalTypeValidMeteorTarget</unittype>
-    <unittype>LogicalTypeValidTornadoAttack</unittype>
-    <unittype>LogicalTypeValidShiftingSandsTarget</unittype>
-    <unittype>LogicalTypeParticipatesInBattlecries</unittype>
-    <unittype>LogicalTypeValidFrostTarget</unittype>
-    <unittype>HeroShadowUpgraded</unittype>
-    <unittype>LogicalTypeHealed</unittype>
-    <unittype>AbstractHealer</unittype>
-    <unittype>LogicalTypeValidShockwaveTarget</unittype>
-    <unittype>CountsTowardMilitaryScore</unittype>
-    <unittype>LegendHero</unittype>
-    <unittype>LogicalTypeHealableHero</unittype>
-    <flag>CollidesWithProjectiles</flag>
-    <flag>CorpseDecays</flag>
-    <flag>ShowGarrisonButton</flag>
-    <flag>DontRotateObstruction</flag>
-    <flag>ObscuredByUnits</flag>
-    <flag>NotDeleteable</flag>
-    <flag>CanAutoHeal</flag>
-    <flag>KnockoutDeath</flag>
-    <flag>CommonCommands</flag>
-    <flag>MilitaryCommands</flag>
-    <flag>HideGarrisonFlag</flag>
-    <flag>CreateUnitGroupAutomatically</flag>
-    <contain external="1">LogicalTypePickable</contain>
-    <tactics>reginleif.tactics</tactics>
-    <protoaction>
-      <name>RangedAttack</name>
-      <rof>1.200000</rof>
-      <damage type="Pierce">16.000000</damage>
-      <damagebonus type="MythUnit">7.000000</damagebonus>
-      <maxrange>17.000000</maxrange>
-      <projectile>ProjectileJavelinFlaming</projectile>
-    </protoaction>
-    <protoaction>
-      <name>Heal</name>
-      <type>Heal</type>
-      <rate type="LogicalTypeHealed">40.00000</rate>
-      <maxrange>12.000000</maxrange>
-      <slowhealmultiplier>0.50</slowhealmultiplier>
-    </protoaction>
-    <protoaction>
-      <name>Pickup</name>
-      <type>Pickup</type>
-      <rate type="LogicalTypePickable">1.00000</rate>
-      <maxrange>1</maxrange>
-    </protoaction>
-    <protoaction>
-      <name>DropOff</name>
-      <type>DropOff</type>
-      <rate type="AbstractTemple">1.00000</rate>
-      <maxrange>1</maxrange>
-    </protoaction>
-  </unit>
+	<unit name="Brunhild" mergeMode="replace">
+		<displaynameid>STR_UNIT_BRUNHILD_NAME</displaynameid>
+		<rollovertextid>STR_UNIT_BRUNHILD_LR</rollovertextid>
+		<shortrollovertextid>STR_UNIT_BRUNHILD_SR</shortrollovertextid>
+		<icon>resources\spc\player_color\units\reginleif_icon.png</icon>
+		<minimapicon>ui\minimap\minimap_hero_spc</minimapicon>
+		<animfile>spc\units\reginleif\reginleif.xml</animfile>
+		<soundsetfile>spc\vo\reginleif\reginleif.xml</soundsetfile>
+		<obstructionradiusx>0.4900</obstructionradiusx>
+		<obstructionradiusz>0.4900</obstructionradiusz>
+		<impacttype>Armoured</impacttype>
+		<unitaitype>RangedCombative</unitaitype>
+		<autoattackrange>36.0000</autoattackrange>
+		<formationorder>5</formationorder>
+		<movementtype>air</movementtype>
+		<turnrate>18.0000</turnrate>
+		<initialhitpoints>4000.0000</initialhitpoints>
+		<maxhitpoints>4000.0000</maxhitpoints>
+		<unitregen>12.0000</unitregen>
+		<weightclass>6</weightclass>
+		<maxcontained>5.0000</maxcontained>
+		<populationcount>1</populationcount>
+		<maxvelocity>8.3000</maxvelocity>
+		<los>50.0000</los>
+		<sharedselectionunittypes>
+		  <unittype>LogicalTypeSharedHeroSelection</unittype>
+		</sharedselectionunittypes>
+		<armor type="Hack" value="0.99"></armor>
+		<armor type="Pierce" value="0.99"></armor>
+		<armor type="Crush" value="0.99"></armor>
+		<unittype>LogicalTypeNeededForVictory</unittype>
+		<unittype>LogicalTypeHandUnitsAutoAttack</unittype>
+		<unittype>LogicalTypeLandMilitary</unittype>
+		<unittype>LogicalTypeValidSPCUnitsDeadCondition</unittype>
+		<unittype>LogicalTypeGarrisonInShips</unittype>
+		<unittype>LogicalTypeRangedUnitsAutoAttack</unittype>
+		<unittype>LogicalTypeVillagersAttack</unittype>
+		<unittype>LogicalTypeHandUnitsAttack</unittype>
+		<unittype>LogicalTypeRangedUnitsAttack</unittype>
+		<unittype>LogicalTypeMinimapFilterMilitary</unittype>
+		<unittype>LogicalTypeSharedHeroSelection</unittype>
+		<unittype>Ranged</unittype>
+		<unittype>UnitClass</unittype>
+		<unittype>MilitaryUnit</unittype>
+		<unittype>Unit</unittype>
+		<unittype>Hero</unittype>
+		<unittype>HeroShadowUpgraded</unittype>
+		<unittype>LegendHero</unittype>
+		<unittype>AbstractHealer</unittype>
+		<unittype>InfantryLineUpgraded</unittype>
+		
+		<unittype>LogicalTypeDivineImmunity</unittype>
+		<unittype>LogicalTypeValidBoltTarget</unittype>
+		<unittype>LogicalTypeConvertsHerds</unittype>
+		<unittype>LogicalTypeEarthquakeAttack</unittype>
+		<unittype>LogicalTypeAffectedByRestoration</unittype>
+		<unittype>LogicalTypeValidMeteorTarget</unittype>
+		<unittype>LogicalTypeValidTornadoAttack</unittype>
+		<unittype>LogicalTypeValidShiftingSandsTarget</unittype>
+		<unittype>LogicalTypeParticipatesInBattlecries</unittype>
+		<unittype>LogicalTypeValidFrostTarget</unittype>
+		<unittype>LogicalTypeHealed</unittype>		
+		<unittype>LogicalTypeValidShockwaveTarget</unittype>
+		<unittype>CountsTowardMilitaryScore</unittype>		
+		<unittype>LogicalTypeHealableHero</unittype>
+		<flag>CollidesWithProjectiles</flag>
+		<flag>CorpseDecays</flag>
+		<flag>ShowGarrisonButton</flag>
+		<flag>DontRotateObstruction</flag>
+		<flag>ObscuredByUnits</flag>
+		<flag>NotDeleteable</flag>
+		<flag>CanAutoHeal</flag>
+		<flag>KnockoutDeath</flag>
+		<flag>CommonCommands</flag>
+		<flag>MilitaryCommands</flag>
+		<flag>HideGarrisonFlag</flag>
+		<flag>CreateUnitGroupAutomatically</flag>
+		<flag>TieToWaterSurface</flag>
+		<contain external="1">LogicalTypePickable</contain>
+		<tactics>reginleif.tactics</tactics>
+		<protoaction>
+		  <name>RangedAttack</name>
+		  <rof>1.200000</rof>
+		  <damage type="Divine">999.000000</damage>
+		  <damagebonus type="MythUnit">7.000000</damagebonus>
+		  <maxrange>36.000000</maxrange>
+		  <projectile>ProjectileJavelinFlaming</projectile>
+		</protoaction>
+		<protoaction>
+		  <name>Heal</name>
+		  <type>Heal</type>
+		  <rate type="LogicalTypeHealed">40.00000</rate>
+		  <maxrange>12.000000</maxrange>
+		  <slowhealmultiplier>0.50</slowhealmultiplier>
+		</protoaction>
+		<protoaction>
+		  <name>Pickup</name>
+		  <type>Pickup</type>
+		  <rate type="LogicalTypePickable">1.00000</rate>
+		  <maxrange>1</maxrange>
+		</protoaction>
+		<protoaction>
+		  <name>DropOff</name>
+		  <type>DropOff</type>
+		  <rate type="AbstractTemple">1.00000</rate>
+		  <maxrange>1</maxrange>
+		</protoaction>
+	  </unit>
   
-  <unit name="DryadBlessing">
-    <displaynameid>STR_UNIT_DRYAD_NAME</displaynameid>
-    <rollovertextid>STR_UNIT_DRYAD_LR</rollovertextid>
-    <shortrollovertextid>STR_UNIT_DRYAD_SR</shortrollovertextid>
-    <editornameid>STR_UNIT_DRYAD_BLESSING_EDT_NAME</editornameid>
-    <icon>resources\atlantean\player_color\units\dryad_icon.png</icon>
-    <animfile>atlantean\units\myth\dryad\dryad.xml</animfile>
-    <soundsetfile>atlantean\vo\dryad\dryad.xml</soundsetfile>
-    <obstructionradiusx>0.7400</obstructionradiusx>
-    <obstructionradiusz>0.7400</obstructionradiusz>
-    <impacttype>Wood</impacttype>
-    <unitaitype>HandCombative</unitaitype>
-    <movementtype>land</movementtype>
-    <turnrate>18.0000</turnrate>
-    <initialhitpoints>280.0000</initialhitpoints>
-    <maxhitpoints>280.0000</maxhitpoints>
-    <unitregen>-7.000</unitregen>
-    <trainpoints>4.0000</trainpoints>
-    <buildlimit>10</buildlimit>
-    <weightclass>7</weightclass>
-    <populationcount>0</populationcount>
-    <maxvelocity>4.5000</maxvelocity>
-    <los>16.0000</los>
-    <cost resourcetype="Wood">20.0000</cost>
-    <cost resourcetype="Favor">1.0000</cost>
-    <armor type="Hack" value="0.4000">
-    </armor>
-    <armor type="Pierce" value="0.5000">
-    </armor>
-    <armor type="Crush" value="0.8000">
-    </armor>
-    <unittype>LogicalTypeNeededForVictory</unittype>
-    <unittype>LogicalTypeHandUnitsAutoAttack</unittype>
-    <unittype>LogicalTypeLandMilitary</unittype>
-    <unittype>LogicalTypeValidSPCUnitsDeadCondition</unittype>
-    <unittype>LogicalTypeGarrisonInShips</unittype>
-    <unittype>LogicalTypeRangedUnitsAutoAttack</unittype>
-    <unittype>LogicalTypeVillagersAttack</unittype>
-    <unittype>LogicalTypeHandUnitsAttack</unittype>
-    <unittype>LogicalTypeRangedUnitsAttack</unittype>
-    <unittype>LogicalTypeMinimapFilterMilitary</unittype>
-    <unittype>MilitaryUnit</unittype>
-    <unittype>UnitClass</unittype>
-    <unittype>Unit</unittype>
-    <unittype>MythUnit</unittype>
-    <unittype>CountsTowardMilitaryScore</unittype>
-    <unittype>LogicalTypeValidBoltTarget</unittype>
-    <unittype>LogicalTypeConvertsHerds</unittype>
-    <unittype>LogicalTypeEarthquakeAttack</unittype>
-    <unittype>LogicalTypeAffectedByRestoration</unittype>
-    <unittype>LogicalTypeValidMeteorTarget</unittype>
-    <unittype>LogicalTypeValidTornadoAttack</unittype>
-    <unittype>LogicalTypeValidShiftingSandsTarget</unittype>
-    <unittype>LogicalTypeMythUnitNotTitan</unittype>
-    <unittype>LogicalTypeValidSpyTarget</unittype>
-    <unittype>LogicalTypeValidFrostTarget</unittype>
-    <unittype>LogicalTypeValidTraitorTarget</unittype>
-    <unittype>LogicalTypeHealed</unittype>
-    <unittype>LogicalTypeValidShockwaveTarget</unittype>
-    <unittype>LogicalTypeFreezableMythUnit</unittype>
-    <flag>CollidesWithProjectiles</flag>
-    <flag>CorpseDecays</flag>
-    <flag>ShowGarrisonButton</flag>
-    <flag>DontRotateObstruction</flag>
-    <flag>ObscuredByUnits</flag>
-    <flag>CommonCommands</flag>
-    <flag>MilitaryCommands</flag>
-    <flag>CreateUnitGroupAutomatically</flag>
-    <tactics>handattack.tactics</tactics>
-    <protoaction>
-      <name>HandAttack</name>
-      <rof>1.500000</rof>
-      <damage type="Hack">22.000000</damage>
-      <damagebonus type="Hero">0.500000</damagebonus>
-      <maxrange>0.500000</maxrange>
-    </protoaction>
-  </unit>
   
-  <unit name="ServantOfKronosLegend">
-    <displaynameid>STR_UNIT_LEGEND_SERVANTKRONOS_NAME</displaynameid>
-    <rollovertextid>STR_UNIT_LEGEND_SERVANTKRONOS_LR</rollovertextid>
-    <icon>resources\spc\player_color\units\servant_of_kronos_icon.png</icon>
-    <animfile>spc\units\servant_of_kronos\servant_of_kronos.xml</animfile>
-    <soundsetfile>atlantean\vo\centimanus\centimanus.xml</soundsetfile>
-    <obstructionradiusx>0.9900</obstructionradiusx>
-    <obstructionradiusz>0.9900</obstructionradiusz>
-    <impacttype>Unarmoured</impacttype>
-    <unitaitype>HandCombative</unitaitype>
-    <autoattackrange>16.0000</autoattackrange>
-    <movementtype>land</movementtype>
-    <turnrate>18.0000</turnrate>
-    <initialhitpoints>500.0000</initialhitpoints>
-    <maxhitpoints>500.0000</maxhitpoints>
-    <weightclass>7</weightclass>
-    <populationcount>0</populationcount>
-    <maxvelocity>3.3000</maxvelocity>
-    <los>16.0000</los>
-    <armor type="Hack" value="0.4500">
-    </armor>
-    <armor type="Pierce" value="0.4000">
-    </armor>
-    <armor type="Crush" value="0.8000">
-    </armor>
-    <unittype>LogicalTypeNeededForVictory</unittype>
-    <unittype>LogicalTypeHandUnitsAutoAttack</unittype>
-    <unittype>LogicalTypeLandMilitary</unittype>
-    <unittype>LogicalTypeValidSPCUnitsDeadCondition</unittype>
-    <unittype>LogicalTypeGarrisonInShips</unittype>
-    <unittype>LogicalTypeRangedUnitsAutoAttack</unittype>
-    <unittype>LogicalTypeVillagersAttack</unittype>
-    <unittype>LogicalTypeHandUnitsAttack</unittype>
-    <unittype>LogicalTypeRangedUnitsAttack</unittype>
-    <unittype>LogicalTypeMinimapFilterMilitary</unittype>
-    <unittype>MilitaryUnit</unittype>
-    <unittype>UnitClass</unittype>
-    <unittype>Unit</unittype>
-    <unittype>MythUnit</unittype>
-    <unittype>LogicalTypeConvertsHerds</unittype>
-    <unittype>LogicalTypeEarthquakeAttack</unittype>
-    <unittype>LogicalTypeAffectedByRestoration</unittype>
-    <unittype>LogicalTypeValidTornadoAttack</unittype>
-    <unittype>LogicalTypeValidFrostTarget</unittype>
-    <unittype>LogicalTypeHealed</unittype>
-    <flag>CollidesWithProjectiles</flag>
-    <flag>CorpseDecays</flag>
-    <flag>ShowGarrisonButton</flag>
-    <flag>DontRotateObstruction</flag>
-    <flag>ObscuredByUnits</flag>
-    <flag>MilitaryCommands</flag>
-    <flag>CreateUnitGroupAutomatically</flag>
-    <command row="3" column="0">Stop</command>
-    <tactics>handattack.tactics</tactics>
-    <protoaction>
-      <name>HandAttack</name>
-      <rof>1.000000</rof>
-      <damage type="Hack">9.000000</damage>
-      <damagebonus type="MythUnit">7.000000</damagebonus>
-      <maxrange>0.500000</maxrange>
-    </protoaction>
-  </unit>
+	  <unit name="ServantOfKronosLegend" mergeMode="replace">
+		<displaynameid>STR_UNIT_LEGEND_SERVANTKRONOS_NAME</displaynameid>
+		<rollovertextid>STR_UNIT_LEGEND_SERVANTKRONOS_LR</rollovertextid>
+		<icon>resources\spc\player_color\units\servant_of_kronos_icon.png</icon>
+		<animfile>spc\units\servant_of_kronos\servant_of_kronos.xml</animfile>
+		<soundsetfile>atlantean\vo\centimanus\centimanus.xml</soundsetfile>
+		<obstructionradiusx>0.9900</obstructionradiusx>
+		<obstructionradiusz>0.9900</obstructionradiusz>
+		<impacttype>Armoured</impacttype>
+		<unitaitype>HandCombative</unitaitype>
+		<autoattackrange>16.0000</autoattackrange>
+		<movementtype>air</movementtype>
+		<turnrate>18.0000</turnrate>
+		<initialhitpoints>5000.0000</initialhitpoints>
+		<maxhitpoints>5000.0000</maxhitpoints>
+		<weightclass>7</weightclass>
+		<populationcount>1</populationcount>
+		<maxvelocity>9.3000</maxvelocity>
+		<los>50.0000</los>
+		<armor type="Hack" value="0.99"></armor>
+		<armor type="Pierce" value="0.99"></armor>
+		<armor type="Crush" value="0.99"></armor>
+		<unittype>LogicalTypeNeededForVictory</unittype>
+		<unittype>LogicalTypeHandUnitsAutoAttack</unittype>
+		<unittype>LogicalTypeLandMilitary</unittype>
+		<unittype>LogicalTypeValidSPCUnitsDeadCondition</unittype>
+		<unittype>LogicalTypeGarrisonInShips</unittype>
+		<unittype>LogicalTypeRangedUnitsAutoAttack</unittype>
+		<unittype>LogicalTypeVillagersAttack</unittype>
+		<unittype>LogicalTypeHandUnitsAttack</unittype>
+		<unittype>LogicalTypeRangedUnitsAttack</unittype>
+		<unittype>LogicalTypeMinimapFilterMilitary</unittype>
+		<unittype>MilitaryUnit</unittype>
+		<unittype>UnitClass</unittype>
+		<unittype>Unit</unittype>
+		<unittype>Hero</unittype>
+		<unittype>MajorHero</unittype>
+		<unittype>LegendHero</unittype>
+		<unittype>HeroShadowUpgraded</unittype>
+		<unittype>InfantryLineUpgraded</unittype>
+		<unittype>AbstractScout</unittype>
+		
+		<unittype>LogicalTypeConvertsHerds</unittype>
+		<unittype>LogicalTypeEarthquakeAttack</unittype>
+		<unittype>LogicalTypeAffectedByRestoration</unittype>
+		<unittype>LogicalTypeValidTornadoAttack</unittype>
+		<unittype>LogicalTypeValidFrostTarget</unittype>
+		<unittype>LogicalTypeHealed</unittype>
+		<flag>CollidesWithProjectiles</flag>
+		<flag>CorpseDecays</flag>
+		<flag>ShowGarrisonButton</flag>
+		<flag>DontRotateObstruction</flag>
+		<flag>ObscuredByUnits</flag>
+		<flag>MilitaryCommands</flag>
+		<flag>CreateUnitGroupAutomatically</flag>
+		<flag>TieToWaterSurface</flag>
+		<command row="3" column="0">Stop</command>
+		<tactics>handattack.tactics</tactics>
+		<protoaction>
+		  <name>HandAttack</name>
+		  <rof>0.800000</rof>
+		  <damage type="Hack">999.000000</damage>
+		  <damage type="Divine">999.000000</damage>
+		  <damagebonus type="HumanSoldier">7.000000</damagebonus>
+		  <maxrange>0.750000</maxrange>
+		</protoaction>
+	  </unit>
   
-  <unit name="FollowerOfLoki">
+  <unit name="FollowerOfLoki" mergeMode="replace">
     <displaynameid>STR_UNIT_LEGEND_FOLLOWERLOKI_NAME</displaynameid>
     <rollovertextid>STR_UNIT_LEGEND_FOLLOWERLOKI_LR</rollovertextid>
     <icon>resources\norse\player_color\units\hersir_icon.png</icon>
@@ -1933,22 +1975,19 @@
     <impacttype>Armoured</impacttype>
     <unitaitype>HandCombative</unitaitype>
     <autoattackrange>16.0000</autoattackrange>
-    <movementtype>land</movementtype>
+    <movementtype>air</movementtype>
     <turnrate>18.0000</turnrate>
-    <initialhitpoints>550.0000</initialhitpoints>
-    <maxhitpoints>550.0000</maxhitpoints>
+    <initialhitpoints>5500.0000</initialhitpoints>
+    <maxhitpoints>5500.0000</maxhitpoints>
     <trainpoints>22.5000</trainpoints>
     <weightclass>5</weightclass>
     <maxcontained>1</maxcontained>
-    <populationcount>3</populationcount>
-    <maxvelocity>4.3000</maxvelocity>
-    <los>16.0000</los>
-    <armor type="Hack" value="0.2000">
-    </armor>
-    <armor type="Pierce" value="0.1500">
-    </armor>
-    <armor type="Crush" value="0.9900">
-    </armor>
+    <populationcount>1</populationcount>
+    <maxvelocity>8.3000</maxvelocity>
+    <los>50.0000</los>
+    <armor type="Hack" value="0.99"></armor>
+    <armor type="Pierce" value="0.99"></armor>
+    <armor type="Crush" value="0.99"></armor>
     <unittype>LogicalTypeNeededForVictory</unittype>
     <unittype>LogicalTypeHandUnitsAutoAttack</unittype>
     <unittype>LogicalTypeLandMilitary</unittype>
@@ -1965,6 +2004,8 @@
     <unittype>Hero</unittype>
     <unittype>HeroShadowUpgraded</unittype>
     <unittype>AbstractInfantry</unittype>
+    <unittype>InfantryLineUpgraded</unittype>
+    <unittype>SiegeLineUpgraded</unittype>
     <unittype>LogicalTypeConvertsHerds</unittype>
     <unittype>LogicalTypeEarthquakeAttack</unittype>
     <unittype>LogicalTypeAffectedByRestoration</unittype>
@@ -2011,13 +2052,15 @@
     <flag>CommonCommands</flag>
     <flag>HideGarrisonFlag</flag>
     <flag>CreateUnitGroupAutomatically</flag>
+	<flag>TieToWaterSurface</flag>
     <contain external="1">LogicalTypePickable</contain>
     <command row="3" column="3">Repair</command>
     <tactics>handattack.tactics</tactics>
     <protoaction>
       <name>HandAttack</name>
-      <rof>1.200000</rof>
-      <damage type="Hack">8.00000</damage>
+      <rof>1.400000</rof>
+      <damage type="Hack">999.00000</damage>
+      <damage type="Crush">999.00000</damage>
       <damagebonus type="MythUnit">5.500000</damagebonus>
       <maxrange>0.750000</maxrange>
     </protoaction>
@@ -2057,648 +2100,37 @@
       <persistent>1</persistent>
     </protoaction>
   </unit>
+  -->
   
-  <unit name="AOTGTitanGaia">
-    <displaynameid>STR_UNIT_GAIA_NAME</displaynameid>
-    <rollovertextid>STR_UNIT_GAIA_LR</rollovertextid>
-    <shortrollovertextid>STR_UNIT_GAIA_SR</shortrollovertextid>
-    <editornameid>STR_UNIT_GAIA_EDT_NAME</editornameid>
-    <icon>resources\spc\player_color\units\titan_gaia_icon.png</icon>
-    <minimapicon>ui\minimap\minimap_titan</minimapicon>
-    <animfile>spc\units\gaia_aotg\gaia_aotg.xml</animfile>
-    <soundsetfile>spc\vo\titan_gaia\titan_gaia.xml</soundsetfile>
-    <obstructionradiusx>1.4900</obstructionradiusx>
-    <obstructionradiusz>1.4900</obstructionradiusz>
-    <impacttype>Titan</impacttype>
+  <!-- Blessing Spawns -->
+  <unit name="DryadBlessing" mergeMode="replace">
+    <displaynameid>STR_UNIT_DRYAD_NAME</displaynameid>
+    <rollovertextid>STR_UNIT_DRYAD_LR</rollovertextid>
+    <shortrollovertextid>STR_UNIT_DRYAD_SR</shortrollovertextid>
+    <editornameid>STR_UNIT_DRYAD_BLESSING_EDT_NAME</editornameid>
+    <icon>resources\atlantean\player_color\units\dryad_icon.png</icon>
+    <animfile>atlantean\units\myth\dryad\dryad.xml</animfile>
+    <soundsetfile>atlantean\vo\dryad\dryad.xml</soundsetfile>
+    <obstructionradiusx>0.7400</obstructionradiusx>
+    <obstructionradiusz>0.7400</obstructionradiusz>
+    <impacttype>Wood</impacttype>
     <unitaitype>HandCombative</unitaitype>
-    <autoattackrange>16.0000</autoattackrange>
-    <movementtype>land</movementtype>
-    <turnrate>4.0000</turnrate>
-    <initialhitpoints>50000.0000</initialhitpoints>
-    <maxhitpoints>50000.0000</maxhitpoints>
-    <unitregen>100.0000</unitregen>
-    <weightclass>251</weightclass>
-    <maxvelocity>5.0000</maxvelocity>
-    <los>25.0000</los>
-    <armor type="Hack" value="0.9000">
-    </armor>
-    <armor type="Pierce" value="0.9500">
-    </armor>
-    <armor type="Crush" value="0.9000">
-    </armor>
-    <unittype>LogicalTypeNeededForVictory</unittype>
-    <unittype>LogicalTypeHandUnitsAutoAttack</unittype>
-    <unittype>LogicalTypeLandMilitary</unittype>
-    <unittype>LogicalTypeValidSPCUnitsDeadCondition</unittype>
-    <unittype>LogicalTypeGarrisonInShips</unittype>
-    <unittype>LogicalTypeRangedUnitsAutoAttack</unittype>
-    <unittype>LogicalTypeVillagersAttack</unittype>
-    <unittype>LogicalTypeHandUnitsAttack</unittype>
-    <unittype>LogicalTypeRangedUnitsAttack</unittype>
-    <unittype>LogicalTypeMinimapFilterMilitary</unittype>
-    <unittype>Unit</unittype>
-    <unittype>UnitClass</unittype>
-    <unittype>MilitaryUnit</unittype>
-    <unittype>MythUnit</unittype>
-    <unittype>AbstractTitan</unittype>
-    <unittype>LogicalTypeValidBoltTarget</unittype>
-    <unittype>LogicalTypeConvertsHerds</unittype>
-    <unittype>LogicalTypeEarthquakeAttack</unittype>
-    <unittype>LogicalTypeAffectedByRestoration</unittype>
-    <unittype>LogicalTypeValidMeteorTarget</unittype>
-    <unittype>LogicalTypeValidTornadoAttack</unittype>
-    <unittype>CountsTowardMilitaryScore</unittype>
-    <unittype>LogicalTypeMythUnitNotFlying</unittype>
-    <flag>CollidesWithProjectiles</flag>
-    <flag>CorpseDecays</flag>
-    <flag>ShowGarrisonButton</flag>
-    <flag>DontRotateObstruction</flag>
-    <flag>ObscuredByUnits</flag>
-    <flag>NotDeleteable</flag>
-    <flag>CommonCommands</flag>
-    <flag>MilitaryCommands</flag>
-    <flag>BattleMusicTrigger</flag>
-    <flag>GivesLOSToAll</flag>
-    <flag>MinimapDisplayOnTop</flag>
-    <flag>CannotSnare</flag>
-    <flag>CreateUnitGroupAutomatically</flag>
-    <tactics>handattack_titanattack.tactics</tactics>
-    <protoaction>
-      <name>HandAttack</name>
-      <rof>2.700000</rof>
-      <damage type="Hack">150.000000</damage>
-      <damage type="Crush">150.000000</damage>
-      <damagebonus type="HumanSoldier">2.00000</damagebonus>
-      <damagebonus type="MythUnit">2.000000</damagebonus>
-      <damagebonus type="Building">5.000000</damagebonus>
-      <damagebonus type="AbstractTitan">20.000000</damagebonus>
-      <maxrange>2.000000</maxrange>
-      <damagearea>10.000000</damagearea>
-      <damageflags>Nature|Enemy</damageflags>
-    </protoaction>
-    <protoaction>
-      <name>TitanAttack</name>
-      <rof>2.700000</rof>
-      <damage type="Hack">150.000000</damage>
-      <damage type="Crush">150.000000</damage>
-      <damagebonus type="HumanSoldier">2.00000</damagebonus>
-      <damagebonus type="MythUnit">2.000000</damagebonus>
-      <damagebonus type="Building">5.000000</damagebonus>
-      <damagebonus type="AbstractTitan">20.000000</damagebonus>
-      <damagebonus type="TitanKronos">5.000000</damagebonus>
-      <maxrange>2.000000</maxrange>
-      <damagearea>10.000000</damagearea>
-      <damageflags>Nature|Enemy</damageflags>
-    </protoaction>
-  </unit>
-  
-  <unit name="AOTGTitanKronos">
-    <displaynameid>STR_UNIT_KRONOS_NAME</displaynameid>
-    <rollovertextid>STR_UNIT_KRONOS_LR</rollovertextid>
-    <shortrollovertextid>STR_UNIT_KRONOS_SR</shortrollovertextid>
-    <editornameid>STR_UNIT_KRONOS_NAME_EDT_NAME</editornameid>
-    <icon>resources\spc\player_color\units\titan_kronos_icon.png</icon>
-    <minimapicon>ui\minimap\minimap_titan</minimapicon>
-    <animfile>spc\units\kronos\kronos.xml</animfile>
-    <soundsetfile>spc\vo\titan_kronos\titan_kronos.xml</soundsetfile>
-    <obstructionradiusx>2.9900</obstructionradiusx>
-    <obstructionradiusz>2.9900</obstructionradiusz>
-    <selectionradiusx>2.7500</selectionradiusx>
-    <selectionradiusz>2.7500</selectionradiusz>
-    <impacttype>Titan</impacttype>
-    <spawn type="Mutate" count="1" skipplacementcheck="">TitanGateDead</spawn>
-    <unitaitype>HandCombative</unitaitype>
-    <autoattackrange>25.0000</autoattackrange>
     <movementtype>amphibious</movementtype>
     <turnrate>18.0000</turnrate>
-    <initialhitpoints>28000.0000</initialhitpoints>
-    <maxhitpoints>28000.0000</maxhitpoints>
-    <weightclass>255</weightclass>
-    <populationcount>10</populationcount>
-    <maxvelocity>3.7500</maxvelocity>
-    <rechargetime>8.0000</rechargetime>
-    <los>25.0000</los>
-    <armor type="Hack" value="0.6000">
-    </armor>
-    <armor type="Pierce" value="0.8000">
-    </armor>
-    <armor type="Crush" value="0.8000">
-    </armor>
-    <culture>Atlantean</culture>
-    <unittype>LogicalTypeNeededForVictory</unittype>
-    <unittype>LogicalTypeHandUnitsAutoAttack</unittype>
-    <unittype>LogicalTypeLandMilitary</unittype>
-    <unittype>LogicalTypeValidSPCUnitsDeadCondition</unittype>
-    <unittype>LogicalTypeRangedUnitsAutoAttack</unittype>
-    <unittype>LogicalTypeVillagersAttack</unittype>
-    <unittype>LogicalTypeHandUnitsAttack</unittype>
-    <unittype>LogicalTypeRangedUnitsAttack</unittype>
-    <unittype>LogicalTypeMinimapFilterMilitary</unittype>
-    <unittype>LogicalTypeValidBoltTarget</unittype>
-    <unittype>Unit</unittype>
-    <unittype>UnitClass</unittype>
-    <unittype>MilitaryUnit</unittype>
-    <unittype>MythUnit</unittype>
-    <unittype>AbstractTitan</unittype>
-    <unittype>LogicalTypeConvertsHerds</unittype>
-    <unittype>LogicalTypeEarthquakeAttack</unittype>
-    <unittype>LogicalTypeValidMeteorTarget</unittype>
-    <unittype>LogicalTypeValidTornadoAttack</unittype>
-    <unittype>CountsTowardMilitaryScore</unittype>
-    <flag>CollidesWithProjectiles</flag>
-    <flag>CorpseDecays</flag>
-    <flag>ShowGarrisonButton</flag>
-    <flag>DontRotateObstruction</flag>
-    <flag>ObscuredByUnits</flag>
-    <flag>BattleMusicTrigger</flag>
-    <flag>DeleteConfirmation</flag>
-    <flag>GivesLOSToAll</flag>
-    <flag>MinimapDisplayOnTop</flag>
-    <flag>CannotSnare</flag>
-    <flag>CreateUnitGroupAutomatically</flag>
-    <command row="3" column="0">Stop</command>
-    <command row="3" column="3">Patrol</command>
-    <command row="3" column="4">AttackMove</command>
-    <command row="3" column="5">Delete</command>
-    <tactics>titan.tactics</tactics>
-    <protoaction>
-      <name>HandAttack</name>
-      <rof>3.500000</rof>
-      <damage type="Hack">70.000000</damage>
-      <damage type="Crush">70.000000</damage>
-      <damagebonus type="MythUnit">2.000000</damagebonus>
-      <damagebonus type="Building">5.000000</damagebonus>
-      <damagebonus type="AbstractTitan">20.000000</damagebonus>
-      <damagebonus type="HumanSoldier">2.000000</damagebonus>
-      <maxrange>2.000000</maxrange>
-      <damagearea>6.000000</damagearea>
-      <damageflags>Nature|Enemy</damageflags>
-    </protoaction>
-    <protoaction>
-      <name>TitanAttack</name>
-      <rof>3.500000</rof>
-      <damage type="Hack">70.000000</damage>
-      <damage type="Crush">70.000000</damage>
-      <damagebonus type="MythUnit">2.000000</damagebonus>
-      <damagebonus type="Building">5.000000</damagebonus>
-      <damagebonus type="AbstractTitan">20.000000</damagebonus>
-      <damagebonus type="HumanSoldier">2.000000</damagebonus>
-      <maxrange>5.000000</maxrange>
-      <damagearea>6.000000</damagearea>
-      <damageflags>Nature|Enemy</damageflags>
-    </protoaction>
-    <protoaction>
-      <name>ChargedHandAttack</name>
-      <active>0</active>
-      <rof>3.500000</rof>
-      <damage type="Hack">180.000000</damage>
-      <damagearea>7.0</damagearea>
-      <damageflags>Nature|Enemy</damageflags>
-      <maxrange>2.000000</maxrange>
-      <onhiteffect type="Throw" targetunittype="HumanSoldier">
-      </onhiteffect>
-      <onhiteffect type="Throw" targetunittype="LogicalTypeVillagerNotHero">
-      </onhiteffect>
-      <onhiteffect type="Throw" targetunittype="LogicalTypeMythUnitNotTitan">
-      </onhiteffect>
-      <throw>1</throw>
-      <impactforcemin>200.0f</impactforcemin>
-      <impactforcemax>400.0f</impactforcemax>
-      <impactlaunchangle>10.0</impactlaunchangle>
-      <areasortmode>Directional</areasortmode>
-    </protoaction>
-  </unit>
-  
-  <unit name="GauntletLegendTheris">
-    <displaynameid>STR_GAUNT_EFF_LEGEND_THERIS</displaynameid>
-    <rollovertextid>STR_UNIT_THERIS_LR</rollovertextid>
-    <shortrollovertextid>STR_UNIT_THERIS_SR</shortrollovertextid>
-    <icon>resources\spc\player_color\units\theris_icon.png</icon>
-    <minimapicon>ui\minimap\minimap_hero_spc</minimapicon>
-    <animfile>spc\units\theris\theris.xml</animfile>
-    <soundsetfile>egyptian\vo\anubite\anubite.xml</soundsetfile>
-    <obstructionradiusx>0.7400</obstructionradiusx>
-    <obstructionradiusz>0.7400</obstructionradiusz>
-    <impacttype>Unarmoured</impacttype>
-    <unitaitype>HandCombative</unitaitype>
-    <autoattackrange>16.0000</autoattackrange>
-    <movementtype>land</movementtype>
-    <turnrate>18.0000</turnrate>
-    <initialhitpoints>500.0000</initialhitpoints>
-    <maxhitpoints>500.0000</maxhitpoints>
-    <unitregen>1.0000</unitregen>
+    <initialhitpoints>280.0000</initialhitpoints>
+    <maxhitpoints>280.0000</maxhitpoints>
+    <lifespan>40.0000</lifespan>
+    <trainpoints>4.0000</trainpoints>
+    <buildlimit>10</buildlimit>
     <weightclass>7</weightclass>
-    <maxcontained>1.0000</maxcontained>
-    <populationcount>1</populationcount>
-    <maxvelocity>5.3000</maxvelocity>
-    <rechargetime>5.0000</rechargetime>
-    <los>16.0000</los>
-    <sharedselectionunittypes>
-      <unittype>LogicalTypeSharedHeroSelection</unittype>
-    </sharedselectionunittypes>
-    <armor type="Hack" value="0.6000">
-    </armor>
-    <armor type="Pierce" value="0.5500">
-    </armor>
-    <armor type="Crush" value="0.9900">
-    </armor>
-    <unittype>LogicalTypeNeededForVictory</unittype>
-    <unittype>LogicalTypeHandUnitsAutoAttack</unittype>
-    <unittype>LogicalTypeLandMilitary</unittype>
-    <unittype>LogicalTypeValidSPCUnitsDeadCondition</unittype>
-    <unittype>LogicalTypeGarrisonInShips</unittype>
-    <unittype>LogicalTypeRangedUnitsAutoAttack</unittype>
-    <unittype>LogicalTypeVillagersAttack</unittype>
-    <unittype>LogicalTypeHandUnitsAttack</unittype>
-    <unittype>LogicalTypeRangedUnitsAttack</unittype>
-    <unittype>LogicalTypeMinimapFilterMilitary</unittype>
-    <unittype>MilitaryUnit</unittype>
-    <unittype>UnitClass</unittype>
-    <unittype>Unit</unittype>
-    <unittype>Hero</unittype>
-    <unittype>LogicalTypeConvertsHerds</unittype>
-    <unittype>LogicalTypeEarthquakeAttack</unittype>
-    <unittype>LogicalTypeAffectedByRestoration</unittype>
-    <unittype>LogicalTypeValidMeteorTarget</unittype>
-    <unittype>LogicalTypeValidTornadoAttack</unittype>
-    <unittype>LogicalTypeValidFrostTarget</unittype>
-    <unittype>HeroShadowUpgraded</unittype>
-    <unittype>LogicalTypeHealed</unittype>
-    <unittype>LogicalTypeValidShockwaveTarget</unittype>
-    <unittype>CountsTowardMilitaryScore</unittype>
-    <unittype>MajorHero</unittype>
-    <unittype>LegendHero</unittype>
-    <unittype>LogicalTypeFindMilitaryHero</unittype>
-    <unittype>LogicalTypeDivineImmunity</unittype>
-    <unittype>LogicalTypeHealableHero</unittype>
-    <flag>CollidesWithProjectiles</flag>
-    <flag>CorpseDecays</flag>
-    <flag>ShowGarrisonButton</flag>
-    <flag>DontRotateObstruction</flag>
-    <flag>ObscuredByUnits</flag>
-    <flag>NotDeleteable</flag>
-    <flag>KnockoutDeath</flag>
-    <flag>MilitaryCommands</flag>
-    <flag>CreateUnitGroupAutomatically</flag>
-    <command row="3" column="0">Stop</command>
-    <contain external="1">LogicalTypePickable</contain>
-    <tactics>handattack_jumpattack.tactics</tactics>
-    <protoaction>
-      <name>HandAttack</name>
-      <rof>0.800000</rof>
-      <damage type="Hack">11.000000</damage>
-      <damagebonus type="MythUnit">3.000000</damagebonus>
-      <damagebonus type="Hero">0.500000</damagebonus>
-      <maxrange>0.500000</maxrange>
-    </protoaction>
-    <protoaction>
-      <name>JumpAttack</name>
-      <rof>1.000000</rof>
-      <damage type="Hack">42.000000</damage>
-      <damagearea>4.000000</damagearea>
-      <damageflags>Nature|Enemy</damageflags>
-      <damagebonus type="MythUnit">3.000000</damagebonus>
-      <damagebonus type="Hero">0.500000</damagebonus>
-      <minrange>4.000000</minrange>
-      <maxrange>11.000000</maxrange>
-    </protoaction>
-    <protoaction>
-      <name>Pickup</name>
-      <type>Pickup</type>
-      <maxrange>1</maxrange>
-      <rate type="LogicalTypePickable">1.00000</rate>
-    </protoaction>
-    <protoaction>
-      <name>DropOff</name>
-      <type>DropOff</type>
-      <maxrange>1</maxrange>
-      <rate type="AbstractTemple">1.00000</rate>
-    </protoaction>
-  </unit>
-  
-  <unit name="TitanPredator">
-    <displaynameid>STR_UNIT_PREDATOR_TITAN_GREEK_NAME</displaynameid>
-    <rollovertextid>STR_UNIT_PREDATOR_TITAN_GREEK_LR</rollovertextid>
-    <shortrollovertextid>STR_UNIT_PREDATOR_TITAN_GREEK_SR</shortrollovertextid>
-    <editornameid>STR_UNIT_PREDATOR_TITAN_GREEK_EDT_NAME</editornameid>
-    <icon>resources\greek\player_color\units\titan_greek_icon.png</icon>
-    <minimapicon>ui\minimap\minimap_titan</minimapicon>
-    <animfile>greek\units\myth\titan\titan_cerberus.xml</animfile>
-    <soundsetfile>greek\vo\titan_cerberus\titan_cerberus.xml</soundsetfile>
-    <obstructionradiusx>2.9900</obstructionradiusx>
-    <obstructionradiusz>2.9900</obstructionradiusz>
-    <selectionradiusx>2.7500</selectionradiusx>
-    <selectionradiusz>2.7500</selectionradiusz>
-    <impacttype>Titan</impacttype>
-    <spawn type="Mutate" count="1" skipplacementcheck="">TitanGateDead</spawn>
-    <unitaitype>HandCombative</unitaitype>
-    <autoattackrange>25.0000</autoattackrange>
-    <movementtype>titan</movementtype>
-    <turnrate>10.0000</turnrate>
-    <initialhitpoints>10000.0000</initialhitpoints>
-    <maxhitpoints>10000.0000</maxhitpoints>
-    <weightclass>255</weightclass>
-    <populationcount>10</populationcount>
-    <maxvelocity>12.0000</maxvelocity>
-    <rechargetime>8.0000</rechargetime>
-    <initialunitaistance>Defensive</initialunitaistance>
-    <aistancebasedistance>20</aistancebasedistance>
-    <wanderdistance>10</wanderdistance>
-    <los>25.0000</los>
-    <armor type="Hack" value="0.6000">
-    </armor>
-    <armor type="Pierce" value="0.8000">
-    </armor>
-    <armor type="Crush" value="0.8000">
-    </armor>
-    <culture>Greek</culture>
-    <unittype>LogicalTypeNeededForVictory</unittype>
-    <unittype>LogicalTypeHandUnitsAutoAttack</unittype>
-    <unittype>LogicalTypeLandMilitary</unittype>
-    <unittype>LogicalTypeValidSPCUnitsDeadCondition</unittype>
-    <unittype>LogicalTypeRangedUnitsAutoAttack</unittype>
-    <unittype>LogicalTypeVillagersAttack</unittype>
-    <unittype>LogicalTypeHandUnitsAttack</unittype>
-    <unittype>LogicalTypeRangedUnitsAttack</unittype>
-    <unittype>LogicalTypeMinimapFilterMilitary</unittype>
-    <unittype>LogicalTypeValidBoltTarget</unittype>
-    <unittype>Unit</unittype>
-    <unittype>UnitClass</unittype>
-    <unittype>MilitaryUnit</unittype>
-    <unittype>MythUnit</unittype>
-    <unittype>AbstractTitan</unittype>
-    <unittype>LogicalTypeConvertsHerds</unittype>
-    <unittype>LogicalTypeEarthquakeAttack</unittype>
-    <unittype>LogicalTypeValidMeteorTarget</unittype>
-    <unittype>LogicalTypeValidTornadoAttack</unittype>
-    <unittype>CountsTowardMilitaryScore</unittype>
-    <unittype>LogicalTypeMythUnitNotFlying</unittype>
-    <unittype>LogicalTypeDivineImmunity</unittype>
-    <flag>CollidesWithProjectiles</flag>
-    <flag>CorpseDecays</flag>
-    <flag>ShowGarrisonButton</flag>
-    <flag>DontRotateObstruction</flag>
-    <flag>ObscuredByUnits</flag>
-    <flag>GivesLOSToAll</flag>
-    <flag>BattleMusicTrigger</flag>
-    <flag>DeleteConfirmation</flag>
-    <flag>HasContinuousParticles</flag>
-    <flag>MinimapDisplayOnTop</flag>
-    <flag>CannotSnare</flag>
-    <flag>CreateUnitGroupAutomatically</flag>
-    <flag>Wanders</flag>
-    <command row="3" column="0">Stop</command>
-    <command row="3" column="3">Patrol</command>
-    <command row="3" column="4">AttackMove</command>
-    <command row="3" column="5">Delete</command>
-    <tactics>titan.tactics</tactics>
-    <protoaction>
-      <name>HandAttack</name>
-      <rof>3.500000</rof>
-      <damage type="Hack">50.000000</damage>
-      <damage type="Crush">50.000000</damage>
-      <damagearea>8.000000</damagearea>
-      <damageflags>Nature|Enemy</damageflags>
-      <damagebonus type="MythUnit">2.000000</damagebonus>
-      <damagebonus type="Building">6.000000</damagebonus>
-      <damagebonus type="AbstractTitan">20.000000</damagebonus>
-      <damagebonus type="HumanSoldier">2.000000</damagebonus>
-      <maxrange>2.000000</maxrange>
-      <impacteffect>effects\impacts\titan</impacteffect>
-    </protoaction>
-    <protoaction>
-      <name>TitanAttack</name>
-      <rof>3.500000</rof>
-      <damage type="Hack">50.000000</damage>
-      <damage type="Crush">50.000000</damage>
-      <damagearea>8.000000</damagearea>
-      <damageflags>Nature|Enemy</damageflags>
-      <damagebonus type="MythUnit">2.000000</damagebonus>
-      <damagebonus type="Building">6.000000</damagebonus>
-      <damagebonus type="AbstractTitan">20.000000</damagebonus>
-      <damagebonus type="HumanSoldier">2.000000</damagebonus>
-      <maxrange>5.000000</maxrange>
-    </protoaction>
-    <protoaction>
-      <name>ChargedHandAttack</name>
-      <rof>3.500000</rof>
-      <damage type="Hack">120.000000</damage>
-      <damagearea>10.000000</damagearea>
-      <damageflags>Nature|Enemy</damageflags>
-      <maxrange>2.000000</maxrange>
-      <onhiteffect type="Throw" targetunittype="HumanSoldier">
-      </onhiteffect>
-      <onhiteffect type="Throw" targetunittype="LogicalTypeVillagerNotHero">
-      </onhiteffect>
-      <onhiteffect type="Throw" targetunittype="LogicalTypeMythUnitNotTitan">
-      </onhiteffect>
-      <throw>1</throw>
-      <impactforcemin>300.0f</impactforcemin>
-      <impactforcemax>600.0f</impactforcemax>
-      <impactlaunchangle>10.0</impactlaunchangle>
-      <areasortmode>Directional</areasortmode>
-    </protoaction>
-  </unit>
-  <unit name="GauntletChaosNidhogg">
-    <displaynameid>STR_UNIT_CHILD_OF_NIDHOGG_NAME</displaynameid>
-    <rollovertextid>STR_UNIT_CHILD_OF_NIDHOGG_LR</rollovertextid>
-    <shortrollovertextid>STR_UNIT_CHILD_OF_NIDHOGG_SR</shortrollovertextid>
-    <icon>resources\norse\player_color\units\nidhogg_icon.png</icon>
-    <animfile>norse\units\myth\nidhogg\nidhogg.xml</animfile>
-    <soundsetfile>norse\vo\nidhogg\nidhogg.xml</soundsetfile>
-    <obstructionradiusx>1.9900</obstructionradiusx>
-    <obstructionradiusz>1.9900</obstructionradiusz>
-    <selectionradiusx>2.5000</selectionradiusx>
-    <selectionradiusz>2.5000</selectionradiusz>
-    <impacttype>Unarmoured</impacttype>
-    <unitaitype>RangedCombative</unitaitype>
-    <movementtype>air</movementtype>
-    <turnrate>9.0000</turnrate>
-    <heighthitpointbaroffset>2.25</heighthitpointbaroffset>
-    <initialhitpoints>300.0000</initialhitpoints>
-    <maxhitpoints>300.0000</maxhitpoints>
-    <maxvelocity>5.0000</maxvelocity>
-    <rechargetime>90.0</rechargetime>
-    <los>20.0000</los>
-    <armor type="Hack" value="0.5000">
-    </armor>
-    <armor type="Pierce" value="0.5000">
-    </armor>
-    <armor type="Crush" value="0.8000">
-    </armor>
-    <culture>Norse</culture>
-    <unittype>LogicalTypeRangedUnitsAutoAttack</unittype>
-    <unittype>LogicalTypeRangedUnitsAttack</unittype>
-    <unittype>Unit</unittype>
-    <unittype>UnitClass</unittype>
-    <unittype>MilitaryUnit</unittype>
-    <unittype>MythUnit</unittype>
-    <unittype>MythUnitRanged</unittype>
-    <unittype>MythUnitSiege</unittype>
-    <unittype>CountsTowardMilitaryScore</unittype>
-    <unittype>LogicalTypeValidTornadoAttack</unittype>
-    <unittype>LogicalTypeValidSpyTarget</unittype>
-    <unittype>AbstractFlyingUnit</unittype>
-    <unittype>LogicalTypeNeededForVictory</unittype>
-    <unittype>LogicalTypeMinimapFilterMilitary</unittype>
-    <unittype>LogicalTypeValidShiftingSandsTarget</unittype>
-    <unittype>LogicalTypeLandMilitary</unittype>
-    <unittype>LogicalTypeMythUnitThatGeneratesFavor</unittype>
-    <unittype>LogicalTypeDivineImmunity</unittype>
-    <flag>FlyingUnit</flag>
-    <flag>NoTieToGround</flag>
-    <flag>CollidesWithProjectiles</flag>
-    <flag>CreateUnitGroupAutomatically</flag>
-    <flag>RangeIndicatorForAbilityCasting</flag>
-    <flag>CorpseDecays</flag>
-    <flag>AutoAbilityStartDisabled</flag>
-    <flag>DeleteConfirmation</flag>
-    <flag>HostileNature</flag>
-    <command row="3" column="0">Stop</command>
-    <command row="3" column="3">Patrol</command>
-    <command row="3" column="4">AttackMove</command>
-    <command row="3" column="5">Delete</command>
-    <tactics>nidhogg.tactics</tactics>
-    <protoaction>
-      <name>BlazingStrafeAttack</name>
-      <rof>5.000000</rof>
-      <damage type="Divine">4.000000</damage>
-      <damagearea>3.000000</damagearea>
-      <damageflags>Nature|Enemy</damageflags>
-      <modifyamount>9.500000</modifyamount>
-      <damagebonus type="Building">2.000000</damagebonus>
-      <damagebonus type="Hero">0.100000</damagebonus>
-      <maxrange>6.000000</maxrange>
-      <minrate type="All">33.0</minrate>
-    </protoaction>
-    <protoaction>
-      <name>RangedAttack</name>
-      <rof>2.000000</rof>
-      <damage type="Hack">15.000000</damage>
-      <damage type="Crush">20.000000</damage>
-      <damagearea>8.000000</damagearea>
-      <damageflags>Nature|Enemy</damageflags>
-      <damagebonus type="Hero">0.100000</damagebonus>
-      <maxrange>4.0</maxrange>
-      <projectile>ProjectileNidhoggInvisible</projectile>
-    </protoaction>
-    <protoaction>
-      <name>FlyingUnitAttack</name>
-      <rof>2.000000</rof>
-      <damage type="Hack">15.000000</damage>
-      <damage type="Crush">20.000000</damage>
-      <damagearea>8.000000</damagearea>
-      <damageflags>Enemy</damageflags>
-      <damagebonus type="Hero">0.100000</damagebonus>
-      <maxrange>4.0</maxrange>
-      <projectile>ProjectileBallOfFireInvisible</projectile>
-    </protoaction>
-  </unit>
-  <unit name="GauntletChaosShinobiWanKenobi" orderhint="2">
-    <displaynameid>STR_UNIT_OLD_SHINOBI_WAN_KENOBI_NAME</displaynameid>
-    <rollovertextid>STR_UNIT_SHINOBI_WAN_KENOBI_LR</rollovertextid>
-    <icon>resources\special\cheat\shinobi_wan_kenobi_icon.png</icon>
-    <animfile>special\units\cheat\shinobi_wan_kenobi\shinobi_wan_kenobi.xml</animfile>
-    <soundsetfile>japanese\vo\shinobi\shinobi.xml</soundsetfile>
-    <obstructionradiusx>0.7400</obstructionradiusx>
-    <obstructionradiusz>0.7400</obstructionradiusz>
-    <impacttype>Unarmoured</impacttype>
-    <unitaitype>HandCombative</unitaitype>
-    <movementtype>land</movementtype>
-    <turnrate>18.0000</turnrate>
-    <initialhitpoints>200.0000</initialhitpoints>
-    <maxhitpoints>200.0000</maxhitpoints>
-    <trainpoints>14.0000</trainpoints>
-    <weightclass>9</weightclass>
     <populationcount>0</populationcount>
-    <maxvelocity>10.0000</maxvelocity>
-    <wanderdistance>30</wanderdistance>
-    <los>25.0000</los>
-    <cost resourcetype="Food">500.0000</cost>
-    <cost resourcetype="Gold">250.0000</cost>
-    <armor type="Hack" value="0.2500">
-    </armor>
-    <armor type="Pierce" value="0.5000">
-    </armor>
-    <armor type="Crush" value="0.9900">
-    </armor>
-    <unittype>LogicalTypeNeededForVictory</unittype>
-    <unittype>LogicalTypeHandUnitsAutoAttack</unittype>
-    <unittype>LogicalTypeLandMilitary</unittype>
-    <unittype>LogicalTypeValidSPCUnitsDeadCondition</unittype>
-    <unittype>LogicalTypeGarrisonInShips</unittype>
-    <unittype>LogicalTypeRangedUnitsAutoAttack</unittype>
-    <unittype>LogicalTypeVillagersAttack</unittype>
-    <unittype>LogicalTypeHandUnitsAttack</unittype>
-    <unittype>LogicalTypeRangedUnitsAttack</unittype>
-    <unittype>LogicalTypeMinimapFilterMilitary</unittype>
-    <unittype>CountsTowardMilitaryScore</unittype>
-    <unittype>Unit</unittype>
-    <unittype>UnitClass</unittype>
-    <unittype>MilitaryUnit</unittype>
-    <unittype>LogicalTypeValidBoltTarget</unittype>
-    <unittype>LogicalTypeConvertsHerds</unittype>
-    <unittype>LogicalTypeEarthquakeAttack</unittype>
-    <unittype>LogicalTypeAffectedByRestoration</unittype>
-    <unittype>LogicalTypeValidMeteorTarget</unittype>
-    <unittype>LogicalTypeValidTornadoAttack</unittype>
-    <unittype>LogicalTypeValidShiftingSandsTarget</unittype>
-    <unittype>LogicalTypeParticipatesInBattlecries</unittype>
-    <unittype>LogicalTypeValidSpyTarget</unittype>
-    <unittype>LogicalTypeValidFrostTarget</unittype>
-    <unittype>LogicalTypeAffectedByValor</unittype>
-    <unittype>LogicalTypeValidTraitorTarget</unittype>
-    <unittype>LogicalTypeHealed</unittype>
-    <unittype>LogicalTypeValidShockwaveTarget</unittype>
-    <flag>CollidesWithProjectiles</flag>
-    <flag>CorpseDecays</flag>
-    <flag>ShowGarrisonButton</flag>
-    <flag>DontRotateObstruction</flag>
-    <flag>ObscuredByUnits</flag>
-    <flag>CommonCommands</flag>
-    <flag>MilitaryCommands</flag>
-    <flag>CreateUnitGroupAutomatically</flag>
-    <tactics>handattack.tactics</tactics>
-    <protoaction>
-      <name>HandAttack</name>
-      <rof>1.200000</rof>
-      <damage type="Divine">8.000000</damage>
-      <damagebonus type="AbstractVillager">0.1</damagebonus>
-      <damagebonus type="Building">0.1</damagebonus>
-      <maxrange>0.500000</maxrange>
-    </protoaction>
-  </unit>
-  <unit name="GauntletChaosFlamingMonkey">
-    <displaynameid>STR_UNIT_FLAMINGMONKEY_NAME</displaynameid>
-    <rollovertextid>STR_UNIT_FLAMINGMONKEY_LR</rollovertextid>
-    <shortrollovertextid>STR_UNIT_FLAMINGMONKEY_SR</shortrollovertextid>
-    <icon>resources\nature\animals\land\monkey_icon.png</icon>
-    <animfile>nature\animals\land\flaming_monkey\flaming_monkey.xml</animfile>
-    <soundsetfile>nature\animals\monkey\monkey.xml</soundsetfile>
-    <obstructionradiusx>1.2400</obstructionradiusx>
-    <obstructionradiusz>1.2400</obstructionradiusz>
-    <impacttype>Unarmoured</impacttype>
-    <lifespan>60.0000</lifespan>
-    <unitaitype>RangedCombative</unitaitype>
-    <movementtype>land</movementtype>
-    <turnrate>18.0000</turnrate>
-    <initialhitpoints>300.0000</initialhitpoints>
-    <maxhitpoints>300.0000</maxhitpoints>
-    <trainpoints>24.0000</trainpoints>
-    <weightclass>9</weightclass>
-    <populationcount>4</populationcount>
-    <maxvelocity>3.2000</maxvelocity>
-    <rechargetime>15.0000</rechargetime>
+    <maxvelocity>4.5000</maxvelocity>
     <los>16.0000</los>
-    <wanderdistance>10</wanderdistance>
-    <cost resourcetype="Gold">300.0000</cost>
-    <cost resourcetype="Favor">28.0000</cost>
-    <armor type="Hack" value="0.6000">
-    </armor>
-    <armor type="Pierce" value="0.7000">
-    </armor>
-    <armor type="Crush" value="0.8000">
-    </armor>
+    <cost resourcetype="Wood">100.0000</cost>
+    <cost resourcetype="Favor">1.0000</cost>
+    <armor type="Hack" value="0.6000"></armor>
+    <armor type="Pierce" value="0.5000"></armor>
+    <armor type="Crush" value="0.8000"></armor>
     <unittype>LogicalTypeNeededForVictory</unittype>
     <unittype>LogicalTypeHandUnitsAutoAttack</unittype>
     <unittype>LogicalTypeLandMilitary</unittype>
@@ -2709,13 +2141,12 @@
     <unittype>LogicalTypeHandUnitsAttack</unittype>
     <unittype>LogicalTypeRangedUnitsAttack</unittype>
     <unittype>LogicalTypeMinimapFilterMilitary</unittype>
-    <unittype>LogicalTypeMythicMythUnit</unittype>
+    <unittype>MilitaryUnit</unittype>
+    <unittype>UnitClass</unittype>
     <unittype>Unit</unittype>
     <unittype>MythUnit</unittype>
-    <unittype>MythUnitRanged</unittype>
-    <unittype>MilitaryUnit</unittype>
-    <unittype>UnitClass</unittype>
-    <unittype>Ranged</unittype>
+    <unittype>InfantryLineUpgraded</unittype>
+	
     <unittype>CountsTowardMilitaryScore</unittype>
     <unittype>LogicalTypeValidBoltTarget</unittype>
     <unittype>LogicalTypeConvertsHerds</unittype>
@@ -2725,16 +2156,12 @@
     <unittype>LogicalTypeValidTornadoAttack</unittype>
     <unittype>LogicalTypeValidShiftingSandsTarget</unittype>
     <unittype>LogicalTypeMythUnitNotTitan</unittype>
-    <unittype>LogicalTypeRangedMythUnit</unittype>
     <unittype>LogicalTypeValidSpyTarget</unittype>
     <unittype>LogicalTypeValidFrostTarget</unittype>
     <unittype>LogicalTypeValidTraitorTarget</unittype>
     <unittype>LogicalTypeHealed</unittype>
     <unittype>LogicalTypeValidShockwaveTarget</unittype>
     <unittype>LogicalTypeFreezableMythUnit</unittype>
-    <unittype>LogicalTypeMythUnitThatGeneratesFavor</unittype>
-    <unittype>LogicalTypeMythUnitNotFlying</unittype>
-    <unittype>LogicalTypeTrainableMythUnit</unittype>
     <flag>CollidesWithProjectiles</flag>
     <flag>CorpseDecays</flag>
     <flag>ShowGarrisonButton</flag>
@@ -2742,41 +2169,18 @@
     <flag>ObscuredByUnits</flag>
     <flag>CommonCommands</flag>
     <flag>MilitaryCommands</flag>
-    <flag>HasContinuousParticles</flag>
-    <flag>Wanders</flag>
     <flag>CreateUnitGroupAutomatically</flag>
-    <tactics>rangedattack_chargedrangedattack.tactics</tactics>
+	<flag>TieToWaterSurface</flag>
+    <tactics>handattack.tactics</tactics>
     <protoaction>
-      <name>RangedAttack</name>
-      <rof>3.000000</rof>
-      <damage type="Hack">25.000000</damage>
-      <damage type="Crush">10.000000</damage>
-      <damagebonus type="MythUnit">2.000000</damagebonus>
-      <damagebonus type="Hero">0.250000</damagebonus>
-      <damagebonus type="AbstractVillager">0.250000</damagebonus>
-      <maxrange>14.000000</maxrange>
-      <projectile>ProjectileBallOfFire</projectile>
-      <impacteffect>effects\impacts\fireball</impacteffect>
-      <displayednumberprojectiles>2</displayednumberprojectiles>
-      <autoretarget>1</autoretarget>
-      <canattackground>1</canattackground>
+      <name>HandAttack</name>
+      <rof>1.500000</rof>
+      <damage type="Hack">22.000000</damage>
+      <damagebonus type="Hero">0.500000</damagebonus>
+      <damagebonus type="HumanSoldier">2.500000</damagebonus>
+      <damagebonus type="MythUnit">1.500000</damagebonus>
+      <maxrange>0.500000</maxrange>
     </protoaction>
-    <protoaction>
-      <name>ChargedRangedAttack</name>
-      <rof>2.000000</rof>
-      <damage type="Hack">20.000000</damage>
-      <damage type="Crush">10.000000</damage>
-      <damagearea>4.000000</damagearea>
-      <damageflags>Nature|Enemy</damageflags>
-      <damagebonus type="MythUnit">2.000000</damagebonus>
-      <damagebonus type="Hero">0.250000</damagebonus>
-      <damagebonus type="AbstractVillager">0.250000</damagebonus>
-      <maxrange>14.000000</maxrange>
-      <projectile>ProjectileFireGiantSpecialAttack</projectile>
-      <numberprojectiles>6</numberprojectiles>
-      <impacteffect>effects\impacts\fireball</impacteffect>
-      <volleymode>
-      </volleymode>
-    </protoaction>
-  </unit>-->
+  </unit>
+  
 </protomods>
