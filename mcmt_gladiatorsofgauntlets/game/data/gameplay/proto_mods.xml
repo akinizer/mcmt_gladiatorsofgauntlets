@@ -1218,6 +1218,7 @@
 		<unittype>LegendHero</unittype>
 		<unittype>HeroShadowUpgraded</unittype>
 		<unittype>AbstractInfantry</unittype>
+		<unittype>AbstractSamurai</unittype>
 		<unittype>InfantryLineUpgraded</unittype>
 		<unittype>AbstractScout</unittype>
 		
@@ -1370,10 +1371,12 @@
 		<flag>MilitaryCommands</flag>
 		<flag>HideGarrisonFlag</flag>
 		<flag>CreateUnitGroupAutomatically</flag>
-		<flag>TieToWaterSurface</flag>
 		<flag>AbilitiesOnBothPages</flag>
+		<flag>ForceBuildingData</flag>
+		<flag>TieToWaterSurface</flag>
 		<contain external="1">LogicalTypePickable</contain>
 		<tactics>circe_legend.tactics</tactics>
+		<hotkeycontext>PharaohAccel</hotkeycontext>
 		<protoaction>
 		  <name>LightningAttack</name>
 		  <rof>1.600000</rof>
@@ -1384,6 +1387,275 @@
 		  <onhiteffect type="MutateNature" targetunittype="Unit" proto="ChickenExploding"></onhiteffect>
 		  <numberbounces>8</numberbounces>
 		  <maxrange>30.000000</maxrange>
+		</protoaction>
+		<protoaction>
+		  <name>SolarRayAttack</name>
+		  <rof>1.600000</rof>
+		  <damage type="Divine">1999.00000</damage>
+		  <damagebonus type="AbstractTitan">10.000000</damagebonus>
+		  <damagebonus type="Building">10.000000</damagebonus>
+		  <damageflags>Nature|Enemy</damageflags>
+		  <numberbounces>8</numberbounces>
+		  <maxrange>30.000000</maxrange>
+		</protoaction>
+		<protoaction>
+		  <name>DeathRayAttack</name>
+		  <rof>1.600000</rof>
+		  <damage type="Divine">1999.00000</damage>
+		  <damagebonus type="AbstractTitan">10.000000</damagebonus>
+		  <damagebonus type="Building">10.000000</damagebonus>
+		  <damageflags>Nature|Enemy</damageflags>
+		  <numberbounces>8</numberbounces>
+		  <maxrange>30.000000</maxrange>
+		</protoaction>
+		<protoaction>
+		  <name>Pickup</name>
+		  <type>Pickup</type>
+		  <maxrange>1</maxrange>
+		  <rate type="LogicalTypePickable">1.00000</rate>
+		</protoaction>
+		<protoaction>
+		  <name>DropOff</name>
+		  <type>DropOff</type>
+		  <maxrange>1</maxrange>
+		  <rate type="AbstractTemple">1.00000</rate>
+		</protoaction>
+	  </unit>
+	  <unit name="GauntletLegendHalogi" mergeMode="replace">
+		<displaynameid>STR_GAUNT_EFF_LEGEND_HALOGI</displaynameid>
+		<rollovertextid>STR_UNIT_FIRE_KING_LR</rollovertextid>
+		<shortrollovertextid>STR_UNIT_FIRE_KING_SR</shortrollovertextid>
+		<icon>resources\norse_freyr\player_color\spc\fire_king_icon.png</icon>
+		<minimapicon>ui\minimap\minimap_hero_spc</minimapicon>
+		<animfile>spc\units\fire_king\fire_king.xml</animfile>
+		<soundsetfile>norse\vo\fire_giant\fire_giant.xml</soundsetfile>
+		<obstructionradiusx>1.2400</obstructionradiusx>
+		<obstructionradiusz>1.2400</obstructionradiusz>
+		<impacttype>Armored</impacttype>
+		<unitaitype>RangedCombative</unitaitype>
+		<movementtype>air</movementtype>
+		<turnrate>18.0000</turnrate>
+		<initialhitpoints>8000.0000</initialhitpoints>
+		<maxhitpoints>8000.0000</maxhitpoints>
+		<unitregen>12.0000</unitregen>
+		<weightclass>9</weightclass>
+		<maxcontained>5.0000</maxcontained>
+		<populationcount>1</populationcount>
+		<maxvelocity>8.2000</maxvelocity>
+		<rechargetime>8.0000</rechargetime>
+		<los>50.0000</los>
+		<armor type="Hack" value="0.99"></armor>
+		<armor type="Pierce" value="0.99"></armor>
+		<armor type="Crush" value="0.99"></armor>
+		<unittype>LogicalTypeNeededForVictory</unittype>
+		<unittype>LogicalTypeHandUnitsAutoAttack</unittype>
+		<unittype>LogicalTypeLandMilitary</unittype>
+		<unittype>LogicalTypeValidSPCUnitsDeadCondition</unittype>
+		<unittype>LogicalTypeGarrisonInShips</unittype>
+		<unittype>LogicalTypeRangedUnitsAutoAttack</unittype>
+		<unittype>LogicalTypeVillagersAttack</unittype>
+		<unittype>LogicalTypeHandUnitsAttack</unittype>
+		<unittype>LogicalTypeRangedUnitsAttack</unittype>
+		<unittype>LogicalTypeMinimapFilterMilitary</unittype>
+		<unittype>LogicalTypeSharedHeroSelection</unittype>
+		<unittype>MilitaryUnit</unittype>
+		<unittype>Ranged</unittype>
+		<unittype>UnitClass</unittype>
+		<unittype>Unit</unittype>
+		<unittype>Hero</unittype>
+		<unittype>HeroShadowUpgraded</unittype>
+		<unittype>MajorHero</unittype>
+		<unittype>LegendHero</unittype>
+		<unittype>InfantryLineUpgraded</unittype>
+		<unittype>SiegeLineUpgraded</unittype>
+		<unittype>ArcherLineUpgraded</unittype>
+		<unittype>AbstractScout</unittype>
+		
+		<unittype>LogicalTypeConvertsHerds</unittype>
+		<unittype>LogicalTypeEarthquakeAttack</unittype>
+		<unittype>LogicalTypeAffectedByRestoration</unittype>
+		<unittype>LogicalTypeAffectedBySunRay</unittype>
+		<unittype>LogicalTypeValidMeteorTarget</unittype>
+		<unittype>LogicalTypeValidTornadoAttack</unittype>
+		<unittype>LogicalTypeValidShiftingSandsTarget</unittype>
+		<unittype>LogicalTypeParticipatesInBattlecries</unittype>
+		<unittype>LogicalTypeValidFrostTarget</unittype>		
+		<unittype>LogicalTypeHealed</unittype>
+		<unittype>LogicalTypeValidShockwaveTarget</unittype>
+		<unittype>CountsTowardMilitaryScore</unittype>		
+		<unittype>LogicalTypeFindMilitaryHero</unittype>
+		<unittype>LogicalTypeHealableHero</unittype>
+		<flag>CollidesWithProjectiles</flag>
+		<flag>CorpseDecays</flag>
+		<flag>ShowGarrisonButton</flag>
+		<flag>DontRotateObstruction</flag>
+		<flag>ObscuredByUnits</flag>
+		<flag>NotDeleteable</flag>
+		<flag>KnockoutDeath</flag>
+		<flag>CommonCommands</flag>
+		<flag>MilitaryCommands</flag>
+		<flag>HideGarrisonFlag</flag>
+		<flag>CreateUnitGroupAutomatically</flag>
+		<flag>TieToWaterSurface</flag>
+		<flag>DirectProjectile</flag>
+		<contain external="1">LogicalTypePickable</contain>
+		<tactics>halogi_legend.tactics</tactics>
+		<protoaction>
+		  <name>HandAttack</name>
+		  <rof>1.2500000</rof>
+		  <damage type="Divine">999.000000</damage>
+		  <damage type="Crush">999.000000</damage>
+		  <maxrange>0.750000</maxrange>
+		  <damagearea>20.000000</damagearea>
+		  <onhiteffect type="Throw" targetunittype="Unit"></onhiteffect>
+		  <throw>1</throw>
+		  <damageflags>Nature|Enemy</damageflags>
+		  <impacteffect>effects\impacts\fireball</impacteffect>
+		</protoaction>
+		<protoaction>
+		  <name>ChargedRangedAttack</name>
+		  <rof>2.000000</rof>
+		  <damage type="Divine">1999.000000</damage>
+		  <damagearea>30.000000</damagearea>
+		  <damageflags>Nature|Enemy</damageflags>
+		  <maxrange>36.000000</maxrange>
+		  <projectile>ProjectileFireGiantSpecialAttack</projectile>
+		  <numberprojectiles>10</numberprojectiles>
+		  <impacteffect>effects\impacts\fireball</impacteffect>
+		  <volleymode>
+		  </volleymode>
+		</protoaction>
+		<protoaction>
+		  <name>Pickup</name>
+		  <type>Pickup</type>
+		  <maxrange>1</maxrange>
+		  <rate type="LogicalTypePickable">1.00000</rate>
+		</protoaction>
+		<protoaction>
+		  <name>DropOff</name>
+		  <type>DropOff</type>
+		  <maxrange>1</maxrange>
+		  <rate type="AbstractTemple">1.00000</rate>
+		</protoaction>
+	  </unit>
+	  <unit name="GauntletLegendChiYou" mergeMode="replace">
+		<displaynameid>STR_GAUNT_EFF_LEGEND_CHIYOU</displaynameid>
+		<rollovertextid>STR_UNIT_CHIYOU_SPC_LR</rollovertextid>
+		<shortrollovertextid>STR_UNIT_CHIYOU_SPC_SR</shortrollovertextid>
+		<editornameid>STR_UNIT_CHIYOU_SPC_EDT_NAME</editornameid>
+		<icon>resources\spc\player_color\units\chiyou_spc_icon.png</icon>
+		<minimapicon>ui\minimap\minimap_hero_spc</minimapicon>
+		<animfile>spc\units\chi_you\chi_you_spc.xml</animfile>
+		<soundsetfile>chinese\vo\chi_you\chi_you.xml</soundsetfile>
+		<obstructionradiusx>0.9900</obstructionradiusx>
+		<obstructionradiusz>0.9900</obstructionradiusz>
+		<selectionradiusx>1.2500</selectionradiusx>
+		<selectionradiusz>1.2500</selectionradiusz>
+		<impacttype>Armoured</impacttype>
+		<unitaitype>HandCombative</unitaitype>
+		<autoattackrange>16.0000</autoattackrange>
+		<movementtype>air</movementtype>
+		<turnrate>18.0000</turnrate>
+		<initialhitpoints>8000.0000</initialhitpoints>
+		<maxhitpoints>8000.0000</maxhitpoints>
+		<unitregen>10.0</unitregen>
+		<weightclass>6</weightclass>
+		<maxcontained>6.0000</maxcontained>
+		<populationcount>1</populationcount>
+		<maxvelocity>11.0000</maxvelocity>
+		<rechargetime>8.0000</rechargetime>
+		<los>55.0000</los>
+		<sharedselectionunittypes>
+		  <unittype>LogicalTypeSharedHeroSelection</unittype>
+		</sharedselectionunittypes>
+		<armor type="Hack" value="0.99"></armor>
+		<armor type="Pierce" value="0.99"></armor>
+		<armor type="Crush" value="0.99"></armor>
+		<unittype>LogicalTypeNeededForVictory</unittype>
+		<unittype>LogicalTypeHandUnitsAutoAttack</unittype>
+		<unittype>LogicalTypeLandMilitary</unittype>
+		<unittype>LogicalTypeValidSPCUnitsDeadCondition</unittype>
+		<unittype>LogicalTypeGarrisonInShips</unittype>
+		<unittype>LogicalTypeRangedUnitsAutoAttack</unittype>
+		<unittype>LogicalTypeVillagersAttack</unittype>
+		<unittype>LogicalTypeHandUnitsAttack</unittype>
+		<unittype>LogicalTypeRangedUnitsAttack</unittype>
+		<unittype>LogicalTypeMinimapFilterMilitary</unittype>
+		<unittype>LogicalTypeHealed</unittype>
+		<unittype>CountsTowardMilitaryScore</unittype>
+		<unittype>LogicalTypeSharedHeroSelection</unittype>
+		<unittype>UnitClass</unittype>
+		<unittype>MilitaryUnit</unittype>
+		<unittype>Unit</unittype>
+		<unittype>Hero</unittype>
+		<unittype>LegendHero</unittype>
+		<unittype>HeroShadowUpgraded</unittype>
+		<unittype>AbstractSamurai</unittype>
+		<unittype>InfantryLineUpgraded</unittype>
+		<unittype>SiegeLineUpgraded</unittype>
+		<unittype>ArcherLineUpgraded</unittype>
+		<unittype>MythUnitMelee</unittype>
+		
+		<unittype>LogicalTypeConvertsHerds</unittype>
+		<unittype>LogicalTypeEarthquakeAttack</unittype>
+		<unittype>LogicalTypeAffectedByRestoration</unittype>
+		<unittype>LogicalTypeValidMeteorTarget</unittype>
+		<unittype>LogicalTypeValidTornadoAttack</unittype>
+		<unittype>LogicalTypeValidShiftingSandsTarget</unittype>
+		<unittype>LogicalTypeParticipatesInBattlecries</unittype>
+		<unittype>LogicalTypeValidFrostTarget</unittype>
+		<unittype>LogicalTypeValidShockwaveTarget</unittype>
+		<unittype>LogicalTypeFindMilitaryHero</unittype>		
+		<unittype>LogicalTypeHealableHero</unittype>
+		<flag>CollidesWithProjectiles</flag>
+		<flag>CorpseDecays</flag>
+		<flag>ShowGarrisonButton</flag>
+		<flag>DontRotateObstruction</flag>
+		<flag>ObscuredByUnits</flag>
+		<flag>NotDeleteable</flag>
+		<flag>KnockoutDeath</flag>
+		<flag>MilitaryCommands</flag>
+		<flag>HideGarrisonFlag</flag>
+		<flag>CreateUnitGroupAutomatically</flag>
+		<flag>TieToWaterSurface</flag>
+		<command row="3" column="0">Stop</command>
+		<tactics>chiyou_legend.tactics</tactics>
+		<contain external="1">LogicalTypePickable</contain>
+		<protoaction>
+		  <name>HandAttack</name>
+		  <rof>0.900000</rof>
+		  <damage type="Hack">999.000000</damage>
+		  <damage type="Divine">999.000000</damage>
+		  <damagebonus type="MilitaryUnit">10.000000</damagebonus>
+		  <damagearea>8.000000</damagearea>
+		  <damageflags>Nature|Enemy</damageflags>
+		  <maxrange>0.750000</maxrange>
+		  <onhiteffect type="Throw" targetunittype="MilitaryUnit"></onhiteffect>
+		  <throw>1</throw>
+		</protoaction>
+		<protoaction>
+		  <name>RangedAttack</name>
+		  <rof>1.700000</rof>
+		  <damage type="Divine">9999.0000</damage>
+		  <minrange>10.000000</minrange>
+		  <maxrange>36.000000</maxrange>
+		  <damagearea>20.000000</damagearea>
+		  <damageflags>Nature|Enemy</damageflags>
+		  <projectile>ProjectileHamadryadSpike</projectile>
+		  <numberprojectiles>1</numberprojectiles> 
+		</protoaction>
+		<protoaction>
+		  <name>TitanAttack</name>
+		  <rof>3.000000</rof>
+		  <damage type="Hack">9999.000000</damage>
+		  <damage type="Crush">9999.000000</damage>
+		  <damage type="Pierce">9999.000000</damage>
+		  <damagearea>30.000000</damagearea>
+		  <damageflags>Nature|Enemy</damageflags>
+		  <maxrange>1.0</maxrange>
+		  <chargeaction>1</chargeaction>
+		  <onhiteffect type="Throw" targetunittype="MilitaryUnit"></onhiteffect>
+		  <throw>1</throw>
 		</protoaction>
 		<protoaction>
 		  <name>Pickup</name>
@@ -2089,238 +2361,6 @@
       <damagebonus type="Hero">0.500000</damagebonus>
       <minrange>4.000000</minrange>
       <maxrange>11.000000</maxrange>
-    </protoaction>
-    <protoaction>
-      <name>Pickup</name>
-      <type>Pickup</type>
-      <maxrange>1</maxrange>
-      <rate type="LogicalTypePickable">1.00000</rate>
-    </protoaction>
-    <protoaction>
-      <name>DropOff</name>
-      <type>DropOff</type>
-      <maxrange>1</maxrange>
-      <rate type="AbstractTemple">1.00000</rate>
-    </protoaction>
-  </unit>
-  
-  
-  <unit name="GauntletLegendHalogi">
-    <displaynameid>STR_GAUNT_EFF_LEGEND_HALOGI</displaynameid>
-    <rollovertextid>STR_UNIT_FIRE_KING_LR</rollovertextid>
-    <shortrollovertextid>STR_UNIT_FIRE_KING_SR</shortrollovertextid>
-    <icon>resources\norse_freyr\player_color\spc\fire_king_icon.png</icon>
-    <minimapicon>ui\minimap\minimap_hero_spc</minimapicon>
-    <animfile>spc\units\fire_king\fire_king.xml</animfile>
-    <soundsetfile>norse\vo\fire_giant\fire_giant.xml</soundsetfile>
-    <obstructionradiusx>1.2400</obstructionradiusx>
-    <obstructionradiusz>1.2400</obstructionradiusz>
-    <impacttype>Unarmoured</impacttype>
-    <unitaitype>RangedCombative</unitaitype>
-    <movementtype>land</movementtype>
-    <turnrate>18.0000</turnrate>
-    <initialhitpoints>800.0000</initialhitpoints>
-    <maxhitpoints>800.0000</maxhitpoints>
-    <unitregen>2.0000</unitregen>
-    <weightclass>9</weightclass>
-    <maxcontained>1.0000</maxcontained>
-    <populationcount>4</populationcount>
-    <maxvelocity>3.2000</maxvelocity>
-    <rechargetime>15.0000</rechargetime>
-    <los>16.0000</los>
-    <armor type="Hack" value="0.6000">
-    </armor>
-    <armor type="Pierce" value="0.8000">
-    </armor>
-    <armor type="Crush" value="0.8000">
-    </armor>
-    <unittype>LogicalTypeNeededForVictory</unittype>
-    <unittype>LogicalTypeHandUnitsAutoAttack</unittype>
-    <unittype>LogicalTypeLandMilitary</unittype>
-    <unittype>LogicalTypeValidSPCUnitsDeadCondition</unittype>
-    <unittype>LogicalTypeGarrisonInShips</unittype>
-    <unittype>LogicalTypeRangedUnitsAutoAttack</unittype>
-    <unittype>LogicalTypeVillagersAttack</unittype>
-    <unittype>LogicalTypeHandUnitsAttack</unittype>
-    <unittype>LogicalTypeRangedUnitsAttack</unittype>
-    <unittype>LogicalTypeMinimapFilterMilitary</unittype>
-    <unittype>LogicalTypeSharedHeroSelection</unittype>
-    <unittype>MilitaryUnit</unittype>
-    <unittype>UnitClass</unittype>
-    <unittype>Unit</unittype>
-    <unittype>Hero</unittype>
-    <unittype>LogicalTypeConvertsHerds</unittype>
-    <unittype>LogicalTypeEarthquakeAttack</unittype>
-    <unittype>LogicalTypeAffectedByRestoration</unittype>
-    <unittype>LogicalTypeAffectedBySunRay</unittype>
-    <unittype>LogicalTypeValidMeteorTarget</unittype>
-    <unittype>LogicalTypeValidTornadoAttack</unittype>
-    <unittype>LogicalTypeValidShiftingSandsTarget</unittype>
-    <unittype>LogicalTypeParticipatesInBattlecries</unittype>
-    <unittype>LogicalTypeValidFrostTarget</unittype>
-    <unittype>HeroShadowUpgraded</unittype>
-    <unittype>LogicalTypeHealed</unittype>
-    <unittype>LogicalTypeValidShockwaveTarget</unittype>
-    <unittype>CountsTowardMilitaryScore</unittype>
-    <unittype>MajorHero</unittype>
-    <unittype>LegendHero</unittype>
-    <unittype>LogicalTypeFindMilitaryHero</unittype>
-    <unittype>LogicalTypeHealableHero</unittype>
-    <flag>CollidesWithProjectiles</flag>
-    <flag>CorpseDecays</flag>
-    <flag>ShowGarrisonButton</flag>
-    <flag>DontRotateObstruction</flag>
-    <flag>ObscuredByUnits</flag>
-    <flag>NotDeleteable</flag>
-    <flag>KnockoutDeath</flag>
-    <flag>CommonCommands</flag>
-    <flag>MilitaryCommands</flag>
-    <flag>HideGarrisonFlag</flag>
-    <flag>CreateUnitGroupAutomatically</flag>
-    <contain external="1">LogicalTypePickable</contain>
-    <tactics>rangedattack_chargedrangedattack.tactics</tactics>
-    <protoaction>
-      <name>RangedAttack</name>
-      <rof>3.000000</rof>
-      <damage type="Hack">45.000000</damage>
-      <damage type="Crush">15.000000</damage>
-      <damagebonus type="MythUnit">5.000000</damagebonus>
-      <maxrange>14.000000</maxrange>
-      <projectile>ProjectileBallOfFire</projectile>
-      <impacteffect>effects\impacts\fireball</impacteffect>
-      <displayednumberprojectiles>2</displayednumberprojectiles>
-      <autoretarget>1</autoretarget>
-      <canattackground>1</canattackground>
-    </protoaction>
-    <protoaction>
-      <name>ChargedRangedAttack</name>
-      <rof>2.000000</rof>
-      <damage type="Hack">60.000000</damage>
-      <damage type="Crush">20.000000</damage>
-      <damagearea>4.000000</damagearea>
-      <damageflags>Nature|Enemy</damageflags>
-      <damagebonus type="MythUnit">5.000000</damagebonus>
-      <maxrange>14.000000</maxrange>
-      <projectile>ProjectileFireGiantSpecialAttack</projectile>
-      <numberprojectiles>6</numberprojectiles>
-      <impacteffect>effects\impacts\fireball</impacteffect>
-      <volleymode>
-      </volleymode>
-    </protoaction>
-    <protoaction>
-      <name>Pickup</name>
-      <type>Pickup</type>
-      <maxrange>1</maxrange>
-      <rate type="LogicalTypePickable">1.00000</rate>
-    </protoaction>
-    <protoaction>
-      <name>DropOff</name>
-      <type>DropOff</type>
-      <maxrange>1</maxrange>
-      <rate type="AbstractTemple">1.00000</rate>
-    </protoaction>
-  </unit>
-  
-  <unit name="GauntletLegendChiYou">
-    <displaynameid>STR_GAUNT_EFF_LEGEND_CHIYOU</displaynameid>
-    <rollovertextid>STR_UNIT_CHIYOU_SPC_LR</rollovertextid>
-    <shortrollovertextid>STR_UNIT_CHIYOU_SPC_SR</shortrollovertextid>
-    <editornameid>STR_UNIT_CHIYOU_SPC_EDT_NAME</editornameid>
-    <icon>resources\spc\player_color\units\chiyou_spc_icon.png</icon>
-    <minimapicon>ui\minimap\minimap_hero_spc</minimapicon>
-    <animfile>spc\units\chi_you\chi_you_spc.xml</animfile>
-    <soundsetfile>chinese\vo\chi_you\chi_you.xml</soundsetfile>
-    <obstructionradiusx>0.9900</obstructionradiusx>
-    <obstructionradiusz>0.9900</obstructionradiusz>
-    <selectionradiusx>1.2500</selectionradiusx>
-    <selectionradiusz>1.2500</selectionradiusz>
-    <impacttype>Armoured</impacttype>
-    <unitaitype>HandCombative</unitaitype>
-    <autoattackrange>16.0000</autoattackrange>
-    <movementtype>land</movementtype>
-    <turnrate>18.0000</turnrate>
-    <initialhitpoints>800.0000</initialhitpoints>
-    <maxhitpoints>800.0000</maxhitpoints>
-    <unitregen>1.0</unitregen>
-    <weightclass>6</weightclass>
-    <maxcontained>1.0000</maxcontained>
-    <populationcount>4</populationcount>
-    <maxvelocity>4.0000</maxvelocity>
-    <rechargetime>16.0000</rechargetime>
-    <los>16.0000</los>
-    <sharedselectionunittypes>
-      <unittype>LogicalTypeSharedHeroSelection</unittype>
-    </sharedselectionunittypes>
-    <armor type="Hack" value="0.7000">
-    </armor>
-    <armor type="Pierce" value="0.7000">
-    </armor>
-    <armor type="Crush" value="0.9900">
-    </armor>
-    <unittype>LogicalTypeNeededForVictory</unittype>
-    <unittype>LogicalTypeHandUnitsAutoAttack</unittype>
-    <unittype>LogicalTypeLandMilitary</unittype>
-    <unittype>LogicalTypeValidSPCUnitsDeadCondition</unittype>
-    <unittype>LogicalTypeGarrisonInShips</unittype>
-    <unittype>LogicalTypeRangedUnitsAutoAttack</unittype>
-    <unittype>LogicalTypeVillagersAttack</unittype>
-    <unittype>LogicalTypeHandUnitsAttack</unittype>
-    <unittype>LogicalTypeRangedUnitsAttack</unittype>
-    <unittype>LogicalTypeMinimapFilterMilitary</unittype>
-    <unittype>LogicalTypeHealed</unittype>
-    <unittype>CountsTowardMilitaryScore</unittype>
-    <unittype>LogicalTypeSharedHeroSelection</unittype>
-    <unittype>UnitClass</unittype>
-    <unittype>MilitaryUnit</unittype>
-    <unittype>Unit</unittype>
-    <unittype>Hero</unittype>
-    <unittype>HeroShadowUpgraded</unittype>
-    <unittype>LogicalTypeConvertsHerds</unittype>
-    <unittype>LogicalTypeEarthquakeAttack</unittype>
-    <unittype>LogicalTypeAffectedByRestoration</unittype>
-    <unittype>LogicalTypeValidMeteorTarget</unittype>
-    <unittype>LogicalTypeValidTornadoAttack</unittype>
-    <unittype>LogicalTypeValidShiftingSandsTarget</unittype>
-    <unittype>LogicalTypeParticipatesInBattlecries</unittype>
-    <unittype>LogicalTypeValidFrostTarget</unittype>
-    <unittype>LogicalTypeValidShockwaveTarget</unittype>
-    <unittype>LogicalTypeFindMilitaryHero</unittype>
-    <unittype>LegendHero</unittype>
-    <unittype>LogicalTypeHealableHero</unittype>
-    <flag>CollidesWithProjectiles</flag>
-    <flag>CorpseDecays</flag>
-    <flag>ShowGarrisonButton</flag>
-    <flag>DontRotateObstruction</flag>
-    <flag>ObscuredByUnits</flag>
-    <flag>NotDeleteable</flag>
-    <flag>KnockoutDeath</flag>
-    <flag>MilitaryCommands</flag>
-    <flag>HideGarrisonFlag</flag>
-    <flag>CreateUnitGroupAutomatically</flag>
-    <command row="3" column="0">Stop</command>
-    <tactics>chi_you.tactics</tactics>
-    <contain external="1">LogicalTypePickable</contain>
-    <protoaction>
-      <name>HandAttack</name>
-      <rof>1.500000</rof>
-      <damage type="Hack">12.000000</damage>
-      <damage type="Divine">5.000000</damage>
-      <damagebonus type="MythUnit">4.000000</damagebonus>
-      <damagebonus type="Hero">2.000000</damagebonus>
-      <damagebonus type="HumanSoldier">1.500000</damagebonus>
-      <maxrange>1.000000</maxrange>
-    </protoaction>
-    <protoaction>
-      <name>TitanAttack</name>
-      <rof>3.000000</rof>
-      <damage type="Hack">60.000000</damage>
-      <damage type="Crush">60.000000</damage>
-      <damagearea>3.000000</damagearea>
-      <damageflags>Enemy</damageflags>
-      <damagebonus type="MythUnit">4.000000</damagebonus>
-      <damagebonus type="Hero">2.000000</damagebonus>
-      <maxrange>1.0</maxrange>
-      <chargeaction>1</chargeaction>
     </protoaction>
     <protoaction>
       <name>Pickup</name>

@@ -8,50 +8,85 @@
     <projectile>ProjectileChainLightning</projectile>
     <accuracy>1.0</accuracy>
     <impacteffect>effects\impacts\pierce</impacteffect>
-    <rate type="All">1.0</rate>
+    <rate type="All">1.0</rate>	
+    <rate type="FlyingUnit">0.0</rate>
+    <rate type="Building">0.0</rate>
   </action>
   <action>
+    <name stringid="STR_ACTION_RANGED">SolarRayAttack</name>
+    <type>ChainAttack</type>
+    <attackaction>1</attackaction>
+    <rangedlogic>1</rangedlogic>
+    <anim>Charging</anim>
+    <projectile>ProjectileMirrorTowerLazer</projectile>
+    <accuracy>1.0</accuracy>
+    <impacteffect>effects\impacts\pierce</impacteffect>
+    <rate type="FlyingUnit">1.0</rate>
+  </action>
+  <action>
+    <name stringid="STR_ACTION_RANGED">DeathRayAttack</name>
+    <type>ChainAttack</type>
+    <attackaction>1</attackaction>
+    <rangedlogic>1</rangedlogic>
+    <anim>Charging</anim>
+    <projectile>ProjectileUFOLazer</projectile>
+    <accuracy>1.0</accuracy>
+    <impacteffect>effects\impacts\pierce</impacteffect>
+    <rate type="Building">1.0</rate>
+  </action>
+ <action>
     <name stringid="STR_ACTION_EMPOWER">Empower</name>
     <type>Empower</type>
-    <anim>Cinematic</anim>
+    <anim>Charging</anim>
     <empowerdata>
       <logicaltypebuildingempoweredforlos>
-        <empowerrate modifytype="BuildRate">1.75</empowerrate>
-        <empowerrate modifytype="ResearchRate">1.75</empowerrate>
-        <empowerrate modifytype="LOSFactor">1.75</empowerrate>
+        <empowerrate modifytype="BuildRate">3.00</empowerrate>
+        <empowerrate modifytype="ResearchRate">3.00</empowerrate>
+        <empowerrate modifytype="LOSFactor">3.00</empowerrate>
+		<empowerrate modifytype="ROF">0.1</empowerrate>
+		<empowerrate modifytype="MilitaryTrainingRate">3.00</empowerrate>
+		<empowerrate modifytype="FavorGatherRate">3.00</empowerrate>
+		<empowerrate modifytype="DropsiteRate">3.00</empowerrate>
+        <empowerrate modifytype="GodPowerBlockRadius">3.00</empowerrate>
+		<modelattachment>vfx\glow\empower_pharaoh.xml</modelattachment>
+        <modelattachmentbone>bonethatdoesntexist</modelattachmentbone>
       </logicaltypebuildingempoweredforlos>
       <logicaltypeaffectedbyvalleyofthekings>
-        <empowerrate modifytype="BuildRate">1.75</empowerrate>
-        <empowerrate modifytype="ResearchRate">1.75</empowerrate>
-        <empowerrate modifytype="MilitaryTrainingRate">1.75</empowerrate>
-        <empowerrate modifytype="ROF">0.75</empowerrate>
-        <modelattachment>vfx\glow\empower_pharaoh.xml</modelattachment>
+        <empowerrate modifytype="BuildRate">3.00</empowerrate>
+        <empowerrate modifytype="ResearchRate">3.00</empowerrate>
+		<empowerrate modifytype="ROF">0.1</empowerrate>
+		<empowerrate modifytype="MilitaryTrainingRate">3.00</empowerrate>
+		<empowerrate modifytype="FavorGatherRate">3.00</empowerrate>
+		<empowerrate modifytype="DropsiteRate">3.00</empowerrate>
+        <empowerrate modifytype="GodPowerBlockRadius">3.00</empowerrate>
+		<modelattachment>vfx\glow\empower_pharaoh.xml</modelattachment>
         <modelattachmentbone>bonethatdoesntexist</modelattachmentbone>
       </logicaltypeaffectedbyvalleyofthekings>
       <logicaltypebuildingthatcanbeempowered>
-        <empowerrate modifytype="BuildRate">1.75</empowerrate>
-        <empowerrate modifytype="ResearchRate">1.75</empowerrate>
-        <empowerrate modifytype="MilitaryTrainingRate">1.75</empowerrate>
-        <empowerrate modifytype="ROF">0.75</empowerrate>
-        <empowerrate modifytype="NumberProjectiles">2.00</empowerrate>
-        <empowerrate modifytype="FavorGatherRate">1.20</empowerrate>
-        <empowerrate modifytype="DropsiteRate">1.20</empowerrate>
-        <empowerrate modifytype="GodPowerBlockRadius">2.0</empowerrate>
-        <modelattachment>vfx\glow\empower_pharaoh.xml</modelattachment>
+        <empowerrate modifytype="BuildRate">3.00</empowerrate>
+        <empowerrate modifytype="ResearchRate">3.00</empowerrate>
+		<empowerrate modifytype="ROF">0.1</empowerrate>
+		<empowerrate modifytype="MilitaryTrainingRate">3.00</empowerrate>
+		<empowerrate modifytype="FavorGatherRate">3.00</empowerrate>
+		<empowerrate modifytype="DropsiteRate">3.00</empowerrate>
+        <empowerrate modifytype="GodPowerBlockRadius">3.00</empowerrate>
+		<modelattachment>vfx\glow\empower_pharaoh.xml</modelattachment>
         <modelattachmentbone>bonethatdoesntexist</modelattachmentbone>
       </logicaltypebuildingthatcanbeempowered>
     </empowerdata>
     <natureempowerdata>
       <abstractsettlement>
-        <empowerrate modifytype="BuildRate">1.75</empowerrate>
+        <empowerrate modifytype="BuildRate">3.00</empowerrate>
         <modelattachment>vfx\glow\empower_pharaoh.xml</modelattachment>
         <modelattachmentbone>bonethatdoesntexist</modelattachmentbone>
       </abstractsettlement>
     </natureempowerdata>
-    <maxrange>3</maxrange>
+    <maxrange>20</maxrange>
   </action>
   <tactic>Default
-	<action priority="100">LightningAttack</action>
+	<action priority="100">SolarRayAttack</action>
+	<action priority="90">DeathRayAttack</action>
+	<action priority="80">LightningAttack</action>
 	<action>Empower</action>
 	<attacktype>LogicalTypeRangedUnitsAttack</attacktype><autoattacktype>LogicalTypeRangedUnitsAutoAttack</autoattacktype><attackresponsetype>LogicalTypeRangedUnitsAttack</attackresponsetype></tactic>
 </tactics>

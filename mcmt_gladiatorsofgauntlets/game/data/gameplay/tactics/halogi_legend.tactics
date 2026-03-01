@@ -1,0 +1,31 @@
+<tactics>
+  <action>
+    <name stringid="STR_ACTION_HAND">HandAttack</name>
+    <type>Attack</type>
+    <rate type="All">1.0</rate>
+    <attackaction>1</attackaction>
+    <handlogic>1</handlogic>
+    <forceareaattacktarget>1</forceareaattacktarget>
+    <anim>RangedAttack</anim>
+    <onhiteffect type="Snare" duration="2" rate="0.85"></onhiteffect>
+    <impacteffect>effects\impacts\fireball</impacteffect>
+  </action>
+  <action>
+    <name stringid="STR_ACTION_CHARGE_RANGED">ChargedRangedAttack</name>
+    <type>Attack</type>
+    <attackaction>1</attackaction>
+    <rangedlogic>1</rangedlogic>
+    <anim>ChargedRangedAttack</anim>
+    <accuracy>1.0</accuracy>
+    <maxspread>5.0</maxspread>
+    <spreadfactor>0.25</spreadfactor>
+    <trackrating>99.0</trackrating>
+    <chargeaction>1</chargeaction>
+    <impacteffect>effects\impacts\pierce</impacteffect>
+    <rate type="Building">1.0</rate>
+  </action>
+  <tactic>Default
+	<action priority="100">ChargedRangedAttack</action>
+	<action priority="90">HandAttack</action>
+	<attacktype>LogicalTypeRangedUnitsAttack</attacktype><autoattacktype>LogicalTypeRangedUnitsAutoAttack</autoattacktype><attackresponsetype>LogicalTypeRangedUnitsAttack</attackresponsetype><attackmovetype>AbstractWall</attackmovetype></tactic>
+</tactics>
